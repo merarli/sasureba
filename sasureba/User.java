@@ -17,13 +17,17 @@ public class User {
     double gpa;
     String name;
     int atk;
+    int step_count;
+    int hold_key;
 
-    public User(double hp_now, double hp_max, double gpa, String name, int atk) {
+    public User(double hp_now, double hp_max, double gpa, String name, int atk, int step_count, int hold_key) {
         this.hp_now = hp_now;
         this.hp_max = hp_max;
         this.gpa = gpa;
         this.name = name;
         this.atk = atk;
+        this.step_count = step_count;
+        this.hold_key = hold_key;
     }
 
     public double getHp_now() {
@@ -64,6 +68,22 @@ public class User {
 
     public void setAtk(int atk) {
         this.atk = atk;
+    }
+
+    public int getStep_count() {
+        return step_count;
+    }
+
+    public void setStep_count(int step_count) {
+        this.step_count = step_count;
+    }
+
+    public int getHold_key() {
+        return hold_key;
+    }
+
+    public void setHold_key(int hold_key) {
+        this.hold_key = hold_key;
     }
     
     
