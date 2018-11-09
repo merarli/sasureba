@@ -37,7 +37,7 @@ public class Sasureba {
         
         System.out.println(map.getMappingString());
         
-        //playerのHPが0より大きい間ループ　
+        //[playerのHPが0より大きい]&[歩数が50以下]間ループ　
         while(player.getHp_now() > 0 && player.getStep_count()<= 50){
             //テストですぐ抜けるようにした
             break;
