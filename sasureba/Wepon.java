@@ -10,5 +10,49 @@ package sasureba;
  * @author C0116116
  */
 public class Wepon {
-    
+
+    String name;
+    String rank;
+    double atk_min;
+    double atk_max;
+
+    public Wepon(String name, String rank, double atk_min, double atk_max) {
+        this.name = name;
+        this.rank = rank;
+        this.atk_min = atk_min;
+        this.atk_max = atk_max;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public void setAtk_min(double atk_min) {
+        this.atk_min = atk_min;
+    }
+
+    public void setAtk_max(double atk_max) {
+        this.atk_max = atk_max;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public double getAtk_min() {
+        return atk_min;
+    }
+
+    public double getAtk_max() {
+        return atk_max;
+    }
+
 }
