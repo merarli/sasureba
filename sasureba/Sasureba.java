@@ -36,7 +36,8 @@ public class Sasureba {
             {"宇","宝","N","N","N"},
             {"宇","宝","N","N","N"}
         };
-        Mapping map = new Mapping(map_data);
+        
+        Mapping map = new Mapping(map_data,0,0);
         
         System.out.println(map.getMappingString());
         
