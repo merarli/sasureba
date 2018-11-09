@@ -87,6 +87,12 @@ public class Mapping {
                     output += "[";
                     output += "勇";
                     output += "]";
+                    
+                    if(map_data[i][j].equals("A")){
+                        System.out.println("Aの武器を獲得");
+                    }
+                    
+                    
                 } else {
                     output += "[";
                     output += map_data[i][j];
