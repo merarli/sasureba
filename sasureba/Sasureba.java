@@ -11,6 +11,7 @@ package sasureba;
  * @author merarli
  * @author takayama
  * @author TakayaKon
+ * @author c0114336
 
  */
 public class Sasureba {
