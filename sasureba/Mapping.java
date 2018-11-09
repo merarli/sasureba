@@ -11,8 +11,12 @@ import java.util.Scanner;
  *
  * @author merarli
  */
+<<<<<<< HEAD
+public class Mapping {  //目良　賢志
+=======
 public class Mapping {
 
+>>>>>>> 07a8dea597f5f8876975395d8ce62ee8ef0428e3
     String[][] map_data;
     //プレイヤーの位置
     int player_x;
