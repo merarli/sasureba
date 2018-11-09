@@ -10,7 +10,7 @@ package sasureba;
  * @author C0116116
  * @author c0114336
  */
-public class Battle {
+public class Battle {   //田中 亮
 
     double user_hp;
     double user_atk;
