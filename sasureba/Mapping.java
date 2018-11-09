@@ -10,7 +10,7 @@ package sasureba;
  *
  * @author merarli
  */
-public class Mapping {
+public class Mapping {  //目良　賢志
     String[][] map_data;
     //プレイヤーの位置
     int player_x;
