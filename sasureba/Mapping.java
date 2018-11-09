@@ -11,9 +11,9 @@ package sasureba;
  * @author merarli
  */
 public class Mapping {
-    String[] map_data;
+    String[][] map_data;
 
-    public Mapping(String[] map_data) {
+    public Mapping(String[][] map_data) {
         this.map_data = map_data;
     }
     
