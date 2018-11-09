@@ -21,12 +21,7 @@ public class Sasureba {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-<<<<<<< HEAD
-        
-        
-        
-        
-=======
+
         //ユーザの作成
         User player = new User(500, 500, 1.0, "勇者", 100,100,0);
         
@@ -47,7 +42,6 @@ public class Sasureba {
             //テストですぐ抜けるようにした
             break;
         }
->>>>>>> 507c58e1b9fc9412cca0ef4d5eef4698193e5afc
     }
     
 }
