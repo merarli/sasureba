@@ -8,6 +8,7 @@ package sasureba;
 /**
  *
  * @author merarli
+ * @author takayama
  */
 public class Sasureba {
 
