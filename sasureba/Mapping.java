@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author merarli
  */
+
 public class Mapping {  //目良　賢志
 
->>>>>>> 07a8dea597f5f8876975395d8ce62ee8ef0428e3
+
     String[][] map_data;
     //プレイヤーの位置
     int player_x;
@@ -67,7 +68,7 @@ public class Mapping {  //目良　賢志
 
         //左に移動したなら
         if (key.equals("a")) {
-            if (player_y == 0) {
+            if (player_x == 0) {
                 System.out.println("そこへは移動できません");
             } else {
                 System.out.println("左に移動しました");
