@@ -9,7 +9,7 @@ package sasureba;
  *
  * @author Co116161
  */
-public class Mob {
+public class Mob { //高山　縁
     String name;
     double hp;
     double atk;
