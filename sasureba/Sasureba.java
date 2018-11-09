@@ -25,6 +25,9 @@ public class Sasureba {
         //ユーザの作成
         User player = new User(500, 500, 1.0, "勇者", 100,100,0);
         
+        //武器の作成
+        Wepon No1 = new Wepon("ノート","C",110,150);
+        
         //マップの作成
         String[][] map_data ={
             {"宇","宝","N","N","N"},
