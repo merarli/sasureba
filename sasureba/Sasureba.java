@@ -22,7 +22,7 @@ public class Sasureba {
     public static void main(String[] args) {
         // TODO code application logic here
         //ユーザの作成
-        User player = new User(500, 500, 1.0, "勇者", 100);
+        User player = new User(500, 500, 1.0, "勇者", 100,100,0);
         
         //マップの作成
         String[][] map_data ={
