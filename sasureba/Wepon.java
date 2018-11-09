@@ -9,7 +9,7 @@ package sasureba;
  *
  * @author C0116116
  */
-public class Wepon {
+public class Wepon {   //金貴哉
 
     String name;
     String rank;
