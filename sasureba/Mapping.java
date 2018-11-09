@@ -12,10 +12,26 @@ package sasureba;
  */
 public class Mapping {
     String[][] map_data;
+    //プレイヤーの位置
+    int player_x;
+    int player_y;
 
-    public Mapping(String[][] map_data) {
+    public Mapping(String[][] map_data, int player_x, int player_y) {
         this.map_data = map_data;
+        this.player_x = player_x;
+        this.player_y = player_y;
     }
+
+
+    
+    public void idou(String key){
+        //上に移動したらなら
+        if(key == "w"){
+            
+        }
+    }
+    
+    
     
     public String getMappingString(){
         String output = "";
