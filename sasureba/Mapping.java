@@ -1,16 +1,22 @@
 package sasureba;
 
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author merarli
  */
+<<<<<<< HEAD
 public class Mapping {  //目良　賢志
+=======
+public class Mapping {
+
+>>>>>>> 07a8dea597f5f8876975395d8ce62ee8ef0428e3
     String[][] map_data;
     //プレイヤーの位置
     int player_x;
@@ -22,24 +28,81 @@ public class Mapping {  //目良　賢志
         this.player_y = player_y;
     }
 
+    public void idou() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("wasdを入力してください(移動)");
+        String key = scanner.next();
+        
+        System.out.println("key: " + key);
+        System.out.println("player_x: " + player_x);
+        System.out.println("player_y: " + player_y);
+        
 
-    
-    public void idou(String key){
         //上に移動したらなら
-        if(key == "w"){
-            
+        if (key.equals("w")) {
+            if (player_y == 0) {
+                System.out.println("そこへは移動できません");
+            } else {
+                System.out.println("上に移動しました");
+                player_y = player_y - 1;
+            }
         }
+
+        //下に移動したなら
+        if (key.equals("s")) {
+            if (player_y == 4) {
+                System.out.println("そこへは移動できません");
+            } else {
+                System.out.println("下に移動しました");
+                player_y = player_y + 1;
+            }
+        }
+
+        //右に移動したなら
+        if (key.equals("d")) {
+            if (player_x == 4) {
+                System.out.println("そこへは移動できません");
+            } else {
+                System.out.println("右に移動しました");
+                player_x = player_x + 1;
+            }
+        }
+
+        //左に移動したなら
+        if (key.equals("a")) {
+            if (player_y == 0) {
+                System.out.println("そこへは移動できません");
+            } else {
+                System.out.println("左に移動しました");
+                player_x = player_x - 1;
+            }
+        }
+        
+        System.out.println(getMappingString());
+        
     }
-    
-    
-    
-    public String getMappingString(){
+
+    public String getMappingString() {
         String output = "";
         for (int i = 0; i < this.map_data.length; i++) {
             for (int j = 0; j < this.map_data[i].length; j++) {
-                output += "[";
-                output += map_data[i][j];
-                output += "]";
+
+                if (player_x == j && player_y == i) {
+                    output += "[";
+                    output += "勇";
+                    output += "]";
+                    
+                    if(map_data[i][j].equals("A")){
+                        System.out.println("Aの武器を獲得");
+                    }
+                    
+                    
+                } else {
+                    output += "[";
+                    output += map_data[i][j];
+                    output += "]";
+                }
+
             }
             output += "\n";
         }
