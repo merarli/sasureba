@@ -34,10 +34,12 @@ public class Sasureba {
         };
         Mapping map = new Mapping(map_data);
         
+        System.out.println(map.getMappingString());
         
         //playerのHPが0より大きい間ループ
         while(player.getHp_now() > 0){
-            
+            //テストですぐ抜けるようにした
+            break;
         }
     }
     

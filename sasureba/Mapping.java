@@ -17,4 +17,16 @@ public class Mapping {
         this.map_data = map_data;
     }
     
+    public String getMappingString(){
+        String output = "";
+        for (int i = 0; i < this.map_data.length; i++) {
+            for (int j = 0; j < this.map_data[i].length; j++) {
+                output += "[";
+                output += map_data[i][j];
+                output += "]";
+            }
+            output += "\n";
+        }
+        return output;
+    }
 }
