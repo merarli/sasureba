@@ -32,7 +32,7 @@ public class Battle {   //田中 亮
         this.mob_hp = mob_hp;
         this.mob_atk = mob_atk;
 
-        while (this.user_hp > 0 || this.mob_hp > 0) {
+        while (this.user_hp > 0 && this.mob_hp > 0) {
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("攻撃１(全力)か攻撃２(手加減)かを選択してください");
