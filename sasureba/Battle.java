@@ -20,14 +20,27 @@ public class Battle {   //田中 亮
     String mob_talk_start;
     String mob_talk_end;
     
-    public Battle(double user_hp, double user_atk, double user_gpa, double mob_hp, double mob_atk, String mob_talk_start, String mob_talk_end) {
+    public Battle(){
+        
+    }
+    public double Battle(double user_hp, double user_atk, double mob_hp, double mob_atk, String mob_talk_start, String mob_talk_end) {
         this.user_hp = user_hp;
         this.user_atk = user_atk;
-        this.user_gpa = user_gpa;
+//        this.user_gpa = user_gpa;
         this.mob_hp = mob_hp;
         this.mob_atk = mob_atk;
         this.mob_talk_start = mob_talk_start;
         this.mob_talk_end = mob_talk_end;
+        
+        
+        /*だれか書いて*/
+        //この間に入力を受け取って戦って終了したらuser_hpを返して
+        //テスト
+//        System.out.println("プレイヤーは死んだ");
+        this.user_hp = 0;
+        //テスト
+        
+        return user_hp;
     }
 
     public double getUser_hp() {
