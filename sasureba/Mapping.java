@@ -158,7 +158,7 @@ public class Mapping {  //目良　賢志
     private void hantei(double tmp_hp,String talk_end) {
         
         //もし勝利してたら イベント
-        if (tmp_hp < 1) {
+        if (tmp_hp > 0) {
             System.out.println("勝利した!!");
             System.out.println(talk_end);
 //            System.out.println(talk_start);
