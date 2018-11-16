@@ -130,7 +130,7 @@ public class Mapping {  //目良　賢志
                         //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk(), uda.getTalk_start(), uda.getTalk_end());
                         //判定の関数にわたす
-                        hantei(tmp_hp,uda.getTalk_start(),uda.getTalk_end());
+                        hantei(tmp_hp, uda.getTalk_start(), uda.getTalk_end());
                     }
 
                 } else {
