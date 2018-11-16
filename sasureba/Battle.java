@@ -36,9 +36,6 @@ public class Battle {   //田中 亮
         this.mob_talk_start = mob_talk_start;
         this.mob_talk_end = mob_talk_end;
 
-        
-        System.out.println(getMob_talk_start());
-        
         while (this.user_hp == 0 || this.mob_hp == 0) {
 
             Scanner scanner = new Scanner(System.in);
@@ -58,11 +55,11 @@ public class Battle {   //田中 亮
                 this.mob_hp = this.mob_hp - (this.user_atk * rnd);
 
                 if (this.mob_hp != 0) {
-                double rndm;
-                double mmin = 0.1;
-                double mmax = 0.8;
-                //randomメソッドでmin～maxの整数を生成
-                rndm = mmin + (Math.random() * (mmax - mmin));
+                    double rndm;
+                    double mmin = 0.1;
+                    double mmax = 0.8;
+                    //randomメソッドでmin～maxの整数を生成
+                    rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃を受けた");
                     this.user_hp = this.user_hp - (this.mob_atk * rndm);
                 }
@@ -70,27 +67,33 @@ public class Battle {   //田中 亮
 
             //攻撃２の場合(手加減)
             if (key.equals("2")) {
+                double rnd;
+                double min = 0.6;
+                double max = 0.8;
+                //randomメソッドでmin～maxの整数を生成
+                rnd = min + (Math.random() * (max - min));
                 this.user_atk *= 0.6;
                 System.out.println("手加減して攻撃します");
                 //攻撃処理.
                 this.mob_atk *= 0.6;
-                this.mob_hp = this.mob_hp - this.user_atk;
+                this.mob_hp = this.mob_hp - (this.user_atk * rnd);
 
                 if (this.mob_hp != 0) {
+                    double rndm;
+                    double mmin = 0.1;
+                    double mmax = 0.8;
+                    rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃を受けた");
-                    this.user_hp = this.user_hp - this.mob_atk;
+                    this.user_hp = this.user_hp - (this.mob_atk * rndm)*0.5;
                 }
             }
         }
-        
-        System.out.println(getMob_talk_end());
 
         //この間に入力を受け取って戦って終了したらuser_hpを返して
         //テスト
         //System.out.println("プレイヤーは死んだ");
         //this.user_hp = 0;
         //テスト
-
         return user_hp;
     }
 
