@@ -44,18 +44,24 @@ public class Battle {   //田中 亮
 
             //攻撃１の場合(全力)
             if (key.equals("1")) {
-                Random rand = new Random();
-                int uatk = (int)user_atk;
-                int dif = rand.nextInt(5) + 8 ;
-                double atk = rand.nextInt(uatk);
+                double rnd;
+                double min = 0.6;
+                double max = 0.8;
+                //randomメソッドでmin～maxの整数を生成
+                rnd = min + (Math.random() * (max - min));
                 this.user_atk *= 1; //攻撃力変更
                 System.out.println("全力で攻撃します");
                 //攻撃処理
-                this.mob_hp = this.mob_hp - this.user_atk;
+                this.mob_hp = this.mob_hp - (this.user_atk * rnd);
 
                 if (this.mob_hp != 0) {
+                double rndm;
+                double mmin = 0.1;
+                double mmax = 0.8;
+                //randomメソッドでmin～maxの整数を生成
+                rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃を受けた");
-                    this.user_hp = this.user_hp - this.mob_atk;
+                    this.user_hp = this.user_hp - (this.mob_atk * rndm);
                 }
             }
 
