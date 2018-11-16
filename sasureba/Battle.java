@@ -36,9 +36,6 @@ public class Battle {   //田中 亮
         this.mob_talk_start = mob_talk_start;
         this.mob_talk_end = mob_talk_end;
 
-        
-        System.out.println(getMob_talk_start());
-        
         while (this.user_hp == 0 || this.mob_hp == 0) {
 
             Scanner scanner = new Scanner(System.in);
@@ -83,8 +80,6 @@ public class Battle {   //田中 亮
             }
         }
         
-        System.out.println(getMob_talk_end());
-
         //この間に入力を受け取って戦って終了したらuser_hpを返して
         //テスト
         //System.out.println("プレイヤーは死んだ");
