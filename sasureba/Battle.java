@@ -35,7 +35,7 @@ public class Battle {   //田中 亮
         this.mob_talk_start = mob_talk_start;
         this.mob_talk_end = mob_talk_end;
 
-        while (this.user_hp != 0) {
+        while (this.user_hp == 0 || this.mob_hp == 0) {
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("攻撃１(全力)か攻撃２(手加減)かを選択してください");
@@ -47,7 +47,7 @@ public class Battle {   //田中 亮
                 System.out.println("全力で攻撃します");
                 //攻撃処理
                 this.mob_hp = this.mob_hp - this.user_atk;
-                
+
                 if (this.mob_hp != 0) {
                     System.out.println("敵の攻撃を受けた");
                     this.user_hp = this.user_hp - this.mob_atk;
@@ -61,7 +61,7 @@ public class Battle {   //田中 亮
                 //攻撃処理.
                 this.mob_atk *= 0.6;
                 this.mob_hp = this.mob_hp - this.user_atk;
-                
+
                 if (this.mob_hp != 0) {
                     System.out.println("敵の攻撃を受けた");
                     this.user_hp = this.user_hp - this.mob_atk;
