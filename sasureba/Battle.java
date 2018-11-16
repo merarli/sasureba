@@ -90,7 +90,7 @@ public class Battle {   //田中 亮
         //System.out.println("プレイヤーは死んだ");
         //this.user_hp = 0;
         //テスト
-        return user_hp;
+        return this.user_hp;
     }
 
     public double getUser_hp() {
