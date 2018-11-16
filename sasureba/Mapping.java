@@ -160,6 +160,7 @@ public class Mapping {  //目良　賢志
         //もし勝利してたら イベント
         if (tmp_hp < 1) {
             System.out.println("勝利した!!");
+            System.out.println(talk_end);
 //            System.out.println(talk_start);
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
@@ -171,7 +172,7 @@ public class Mapping {  //目良　賢志
         } else {
             //負けたときの処理
             System.out.println("負けた");
-            System.out.println(talk_end);
+            
             /*続き書いて*/
             sibou_flg = 1;
         }
