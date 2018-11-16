@@ -44,7 +44,6 @@ public class Battle {   //田中 亮
                 double max = 0.8;
                 //randomメソッドでmin～maxの整数を生成
                 rnd = min + (Math.random() * (max - min));
-                this.user_atk *= 1; //攻撃力変更
                 System.out.println("全力で攻撃します");
                 //攻撃処理
                 this.mob_hp = this.mob_hp - (this.user_atk * rnd);
@@ -70,11 +69,9 @@ public class Battle {   //田中 亮
                 double max = 0.8;
                 //randomメソッドでmin～maxの整数を生成
                 rnd = min + (Math.random() * (max - min));
-                this.user_atk *= 0.6;
                 System.out.println("手加減して攻撃します");
                 //攻撃処理.
-                this.mob_atk *= 0.6;
-                this.mob_hp = this.mob_hp - (this.user_atk * rnd);
+                this.mob_hp = this.mob_hp - (this.user_atk * 0.6) * rnd;
                 System.out.println("敵の残り体力：" + this.mob_hp);
 
                 if (this.mob_hp != 0) {
