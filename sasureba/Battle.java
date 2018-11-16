@@ -35,21 +35,35 @@ public class Battle {   //田中 亮
         this.mob_talk_start = mob_talk_start;
         this.mob_talk_end = mob_talk_end;
 
-        /*だれか書いて*/
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("全力攻撃１か手加減攻撃２かを選択してください");
-        String key = scanner.next();
+        while (this.user_hp != 0) {
 
-        //攻撃１の場合(全力)
-        if (key.equals("1")) {
-            this.user_atk = 1;
-            System.out.println("全力で攻撃します");
-        }
-        
-        //攻撃２の場合(手加減)
-        if (key.equals("2")) {
-            this.user_atk = 2;
-            System.out.println("手加減して攻撃します");
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("攻撃１(全力)か攻撃２(手加減)かを選択してください");
+            String key = scanner.next();
+
+            //攻撃１の場合(全力)
+            if (key.equals("1")) {
+                this.user_atk *= 1; //攻撃力変更
+                System.out.println("全力で攻撃します");
+                //攻撃処理
+                this.mob_hp = this.mob_hp - this.user_atk;
+                
+                if (this.mob_hp != 0) {
+                    System.out.println("敵の攻撃を受けた");
+                    this.user_hp = this.user_hp - this.mob_atk;
+                }
+            }
+
+            //攻撃２の場合(手加減)
+            if (key.equals("2")) {
+                this.user_atk = 2;
+                System.out.println("手加減して攻撃します");
+                //攻撃処理.
+
+                if (this.mob_hp != 0) {
+                    System.out.println("敵の攻撃を受けた");
+                }
+            }
         }
 
         //この間に入力を受け取って戦って終了したらuser_hpを返して
