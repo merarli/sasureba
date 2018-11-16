@@ -85,11 +85,6 @@ public class Battle {   //田中 亮
                 }
             }
         }
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> f06e13b4499b12bf618305c39ac3d9ad5ad7f279
         //この間に入力を受け取って戦って終了したらuser_hpを返して
         //テスト
         //System.out.println("プレイヤーは死んだ");
