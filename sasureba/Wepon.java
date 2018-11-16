@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package sasureba;
+import java.util.Random;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Wepon {   //金貴哉
     String rank;
     double atk_min;
     double atk_max;
+    double atk;
 
     public Wepon(String name, String rank, double atk_min, double atk_max) {
         this.name = name;
@@ -53,6 +55,14 @@ public class Wepon {   //金貴哉
 
     public double getAtk_max() {
         return atk_max;
+    }
+    
+    public double getAtk(){
+        Random rand = new Random();
+        int dif = (int)atk_max - (int)atk_min;
+        double atk = rand.nextInt(dif) + atk_min ;
+        System.out.println(atk);
+        return atk;    
     }
 
 }
