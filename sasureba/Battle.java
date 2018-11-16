@@ -56,12 +56,15 @@ public class Battle {   //田中 亮
 
             //攻撃２の場合(手加減)
             if (key.equals("2")) {
-                this.user_atk = 2;
+                this.user_atk *= 0.6;
                 System.out.println("手加減して攻撃します");
                 //攻撃処理.
-
+                this.mob_atk *= 0.6;
+                this.mob_hp = this.mob_hp - this.user_atk;
+                
                 if (this.mob_hp != 0) {
                     System.out.println("敵の攻撃を受けた");
+                    this.user_hp = this.user_hp - this.mob_atk;
                 }
             }
         }
