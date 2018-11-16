@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author merarli
  */
-public class Mapping {  //目良　賢志
+public class Mapping {  //目良　賢志 田中、モハメド
     //ユーザの作成
 
     User player = new User(500, 500, 1.0, "勇者", 100, 0);

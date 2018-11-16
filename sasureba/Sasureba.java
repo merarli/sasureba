@@ -14,7 +14,7 @@ package sasureba;
  * @author c0114336
  *
  */
-public class Sasureba {
+public class Sasureba {//目良
 
     /**
      * @param args the command line arguments

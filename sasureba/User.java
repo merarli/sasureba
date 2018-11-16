@@ -11,7 +11,7 @@ package sasureba;
  */
 
 
-public class User {   //目良　賢志
+public class User {   //目良　賢志、金
     double hp_now;
     double hp_max;
     double gpa;
