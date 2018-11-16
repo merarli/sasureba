@@ -38,32 +38,31 @@ public class Sasureba {
         //勝敗条件
         System.out.println("勝利条件：松下先生を倒そう　敗北条件：太郎の敗北");
 
-        //ユーザの作成
-        User player = new User(500, 500, 1.0, "勇者", 100, 100, 0);
 
-        //武器の作成
-        Wepon No1 = new Wepon("ノート", "C", 110, 150);
 
         //マップの作成
         String[][] map_data = {
-            {"宇", "宝", "A", "N", "N"},
+            {"N", "宝", "A", "N", "N"},
             {"宇", "宝", "N", "N", "N"},
             {"宇", "宝", "N", "N", "N"},
             {"宇", "宝", "N", "N", "N"},
             {"宇", "宝", "N", "N", "N"}
         };
 
-        Mapping map = new Mapping(map_data, 0, 0);
+        Mapping map = new Mapping(map_data, 0, 0,0,0);
 
         System.out.println(map.getMappingString());
 
         //[playerのHPが0より大きい]&[歩数が50以下]間ループ　
-        while (player.getHp_now() > 0 && player.getStep_count() >= 50) {
+//        while (player.getHp_now() > 0 && player.getStep_count() >= 50) {
+        while (map.getSibou_flg() == 0 && map.getHosu() < 5) {
+            System.out.println(map.getHosu());
             //テストですぐ抜けるようにした
 
 //            break;
             map.idou();
         }
+        System.out.println("ゲーム終了");
     }
 
 }
