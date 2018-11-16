@@ -17,9 +17,11 @@ public class Mapping {  //目良　賢志
     User player = new User(500, 500, 1.0, "勇者", 100, 0);
 
     //武器の作成
-    Wepon note = new Wepon("ノート", "A", 110, 150);
+    Wepon note = new Wepon("ノート", "C", 110, 150);
+    Wepon sankosyo = new Wepon("参考書", "A", 200, 250);
 
     Mob uda = new Mob("うだりゅうじ", 300, 100, "RSAを手計算で求めよ", "解けただとぉ？");
+    Mob matushita = new Mob("まつしたせんせい", 1000, 200, "魔王なので宇宙が理解できます", "すばらしいです");
 
     Battle bt = new Battle();
     String[][] map_data;
@@ -29,14 +31,13 @@ public class Mapping {  //目良　賢志
     int sibou_flg;
     int hosu;
 
-    public Mapping(String[][] map_data, int player_x, int player_y,int sibou_flg,int hosu) {
+    public Mapping(String[][] map_data, int player_x, int player_y, int sibou_flg, int hosu) {
         this.map_data = map_data;
         this.player_x = player_x;
         this.player_y = player_y;
         this.sibou_flg = sibou_flg;
         this.hosu = hosu;
     }
-    
 
     public int getSibou_flg() {
         return sibou_flg;
@@ -117,8 +118,19 @@ public class Mapping {  //目良　賢志
                         /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
-                        player.setAtk(note.getAtk());
+                        player.setAtk(sankosyo.getAtk());
                         System.out.println("Aの武器を獲得");
+
+                        //拾ったら武器を消す
+                        map_data[i][j] = "N";
+                    }
+
+                    if (map_data[i][j].equals("C")) {
+                        /*ここだれか書いて！！！！！！！！*/
+                        //Weponクラスに武器の攻撃力を決定してもらって
+                        //攻撃力を返してもらい
+                        player.setAtk(note.getAtk());
+                        System.out.println("Cの武器を獲得");
 
                         //拾ったら武器を消す
                         map_data[i][j] = "N";
@@ -132,6 +144,21 @@ public class Mapping {  //目良　賢志
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, uda.getTalk_end());
+                    }
+
+                    if (map_data[i][j].equals("魔")) {
+                        //仮のHPデータをここにいれる
+                        double tmp_hp;
+                        System.out.println(matushita.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), matushita.getHp(), matushita.getAtk());
+                        //判定の関数にわたす
+                        hantei(tmp_hp, matushita.getTalk_end());
+                    }
+                    //HP全回復
+                    if (map_data[i][j].equals("神")) {
+                        System.out.println("クリムベルゲン先生によりHPが全回復した！");
+                        player.setHp_now(player.getHp_max());
                     }
 
                 } else {
@@ -155,7 +182,7 @@ public class Mapping {  //目良　賢志
         this.hosu = hosu;
     }
 
-    private void hantei(double tmp_hp,String talk_end) {
+    private void hantei(double tmp_hp, String talk_end) {
         player.setHp_now(tmp_hp);
         //もし勝利してたら イベント
         if (tmp_hp > 0) {
@@ -165,16 +192,16 @@ public class Mapping {  //目良　賢志
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
             System.out.println("プレイヤーのGPAが上昇した");
-            System.out.println("プレイヤーGPA:"+player.getGpa());
+            System.out.println("プレイヤーGPA:" + player.getGpa());
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
             System.out.println("プレイヤーのHPが上昇した");
-            System.out.println("プレイヤーHP:"+player.getHp_now());
-            
+            System.out.println("プレイヤーHP:" + player.getHp_now());
+
         } else {
             //負けたときの処理
             System.out.println("負けた");
-            
+
             /*続き書いて*/
             sibou_flg = 1;
         }
