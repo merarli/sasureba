@@ -55,7 +55,7 @@ public class Sasureba {
 
         //[playerのHPが0より大きい]&[歩数が50以下]間ループ　
 //        while (player.getHp_now() > 0 && player.getStep_count() >= 50) {
-        while (map.getSibou_flg() == 0 && map.getHosu() < 5) {
+        while (map.getSibou_flg() == 0 && map.getHosu() < 50) {
             System.out.println(map.getHosu());
             //テストですぐ抜けるようにした
 
