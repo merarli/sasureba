@@ -130,6 +130,7 @@ public class Mapping {  //目良　賢志
                         System.out.println(uda.talk_start);
                         //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
+                        player.setHp_now(tmp_hp);
                         //判定の関数にわたす
                         hantei(tmp_hp, uda.getTalk_end());
                     }

@@ -20,7 +20,6 @@ public class Battle {   //田中 亮
     double mob_hp;
     double mob_atk;
 
-
     public Battle() {
 
     }
@@ -32,7 +31,7 @@ public class Battle {   //田中 亮
         this.mob_hp = mob_hp;
         this.mob_atk = mob_atk;
 
-        while (this.user_hp != 0 || this.mob_hp != 0) {
+        while (this.user_hp > 0 && this.mob_hp > 0) {
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("攻撃１(全力)か攻撃２(手加減)かを選択してください");
@@ -50,6 +49,8 @@ public class Battle {   //田中 亮
                 //攻撃処理
                 this.mob_hp = this.mob_hp - (this.user_atk * rnd);
 
+                System.out.println("敵の残り体力：" + this.mob_hp);
+
                 if (this.mob_hp != 0) {
                     double rndm;
                     double mmin = 0.1;
@@ -58,6 +59,7 @@ public class Battle {   //田中 亮
                     rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃を受けた");
                     this.user_hp = this.user_hp - (this.mob_atk * rndm);
+                    System.out.println("あなたの残り体力：" + this.user_hp);
                 }
             }
 
@@ -73,6 +75,7 @@ public class Battle {   //田中 亮
                 //攻撃処理.
                 this.mob_atk *= 0.6;
                 this.mob_hp = this.mob_hp - (this.user_atk * rnd);
+                System.out.println("敵の残り体力：" + this.mob_hp);
 
                 if (this.mob_hp != 0) {
                     double rndm;
@@ -80,7 +83,8 @@ public class Battle {   //田中 亮
                     double mmax = 0.8;
                     rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃を受けた");
-                    this.user_hp = this.user_hp - (this.mob_atk * rndm)*0.5;
+                    this.user_hp = this.user_hp - (this.mob_atk * rndm) * 0.5;
+                    System.out.println("あなたの残り体力：" + this.user_hp);
                 }
             }
         }
@@ -131,7 +135,5 @@ public class Battle {   //田中 亮
     public void setMob_atk(double mob_atk) {
         this.mob_atk = mob_atk;
     }
-
-
 
 }
