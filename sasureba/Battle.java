@@ -5,6 +5,7 @@
  */
 package sasureba;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -43,6 +44,10 @@ public class Battle {   //田中 亮
 
             //攻撃１の場合(全力)
             if (key.equals("1")) {
+                Random rand = new Random();
+                int uatk = (int)user_atk;
+                int dif = rand.nextInt(5) + 8 ;
+                double atk = rand.nextInt(uatk);
                 this.user_atk *= 1; //攻撃力変更
                 System.out.println("全力で攻撃します");
                 //攻撃処理
