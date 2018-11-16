@@ -128,7 +128,7 @@ public class Mapping {  //目良　賢志
                         //仮のHPデータをここにいれる
                         double tmp_hp;
                         //データをセットしてBattle開始
-                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk(), uda.getTalk_start(), uda.getTalk_end());
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp,uda.getTalk_start(),uda.getTalk_end());
                     }
