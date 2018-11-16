@@ -16,7 +16,7 @@ public class User {   //目良　賢志
     double hp_max;
     double gpa;
     String name;
-    int atk;
+    double atk;
 //    int step_count;
     int hold_key;
 
@@ -61,11 +61,11 @@ public class User {   //目良　賢志
         this.name = name;
     }
 
-    public int getAtk() {
+    public double getAtk() {
         return atk;
     }
 
-    public void setAtk(int atk) {
+    public void setAtk(double atk) {
         this.atk = atk;
     }
 

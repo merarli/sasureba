@@ -17,7 +17,7 @@ public class Mapping {  //目良　賢志
     User player = new User(500, 500, 1.0, "勇者", 100, 0);
 
     //武器の作成
-    Wepon No1 = new Wepon("ノート", "C", 110, 150);
+    Wepon note = new Wepon("ノート", "A", 110, 150);
 
     Mob uda = new Mob("うだりゅうじ", 300, 100, "RSAを手計算で求めよ", "解けただとぉ？");
 
@@ -117,7 +117,7 @@ public class Mapping {  //目良　賢志
                         /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
-                        //player.setHp(攻撃力);
+                        player.setAtk(note.getAtk());
                         System.out.println("Aの武器を獲得");
 
                         //拾ったら武器を消す
