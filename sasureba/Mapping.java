@@ -130,7 +130,7 @@ public class Mapping {  //目良　賢志
                         //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk(), uda.getTalk_start(), uda.getTalk_end());
                         //判定の関数にわたす
-                        hantei(tmp_hp);
+                        hantei(tmp_hp,uda.getTalk_start(),uda.getTalk_end());
                     }
 
                 } else {
@@ -154,11 +154,12 @@ public class Mapping {  //目良　賢志
         this.hosu = hosu;
     }
 
-    private void hantei(double tmp_hp) {
+    private void hantei(double tmp_hp,String talk_start,String talk_end) {
         
         //もし勝利してたら イベント
         if (tmp_hp < 1) {
             System.out.println("勝利した!!");
+            System.out.println(talk_start);
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
             System.out.println("プレイヤーのGPAが上昇した");
@@ -169,6 +170,7 @@ public class Mapping {  //目良　賢志
         } else {
             //負けたときの処理
             System.out.println("負けた");
+            System.out.println(talk_start);
             /*続き書いて*/
             sibou_flg = 1;
         }
