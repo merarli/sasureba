@@ -158,11 +158,13 @@ public class Mapping {  //目良　賢志
         
         //もし勝利してたら イベント
         if (tmp_hp < 1) {
-            System.out.println("勝利した");
+            System.out.println("勝利した!!");
             //GPA上昇させる
-            player.setGpa(player.getGpa() + 1);
-            /*続き書いて*/
-            
+            player.setGpa(player.getGpa() + 0.1);
+            System.out.println("プレイヤーのGPAが上昇した");
+            player.setHp_max(player.getHp_max() + 20);
+            player.setHp_now(player.getHp_now() + 20);
+            System.out.println("プレイヤーのHPが上昇した");
             
         } else {
             //負けたときの処理
