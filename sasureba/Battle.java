@@ -5,6 +5,8 @@
  */
 package sasureba;
 
+import java.util.Scanner;
+
 /**
  *
  * @author C0116116
@@ -19,10 +21,11 @@ public class Battle {   //田中 亮
     double mob_atk;
     String mob_talk_start;
     String mob_talk_end;
-    
-    public Battle(){
-        
+
+    public Battle() {
+
     }
+
     public double Battle(double user_hp, double user_atk, double mob_hp, double mob_atk, String mob_talk_start, String mob_talk_end) {
         this.user_hp = user_hp;
         this.user_atk = user_atk;
@@ -31,15 +34,30 @@ public class Battle {   //田中 亮
         this.mob_atk = mob_atk;
         this.mob_talk_start = mob_talk_start;
         this.mob_talk_end = mob_talk_end;
-        
-        
+
         /*だれか書いて*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("全力攻撃１か手加減攻撃２かを選択してください");
+        String key = scanner.next();
+
+        //攻撃１の場合(全力)
+        if (key.equals("1")) {
+            this.user_atk = 1;
+            System.out.println("全力で攻撃します");
+        }
+        
+        //攻撃２の場合(手加減)
+        if (key.equals("2")) {
+            this.user_atk = 2;
+            System.out.println("手加減して攻撃します");
+        }
+
         //この間に入力を受け取って戦って終了したらuser_hpを返して
         //テスト
 //        System.out.println("プレイヤーは死んだ");
         this.user_hp = 0;
         //テスト
-        
+
         return user_hp;
     }
 
@@ -98,5 +116,5 @@ public class Battle {   //田中 亮
     public void setMob_talk_end(String mob_talk_end) {
         this.mob_talk_end = mob_talk_end;
     }
-    
+
 }
