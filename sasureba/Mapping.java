@@ -163,6 +163,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         if (player.getHold_key() == 1) {
                             player.setAtk(NotePC.getAtk());
                             System.out.println("宝箱が開いた" + "\n" + "Sの武器を獲得");
+                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                             //拾ったら武器を消す
                             map_data[i][j] = "N";
