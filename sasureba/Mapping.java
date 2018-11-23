@@ -1,6 +1,7 @@
 package sasureba;
 
 import java.util.Scanner;
+import java.util.Random;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -28,7 +29,8 @@ public class Mapping {  //目良　賢志 田中、モハメド
     Mob kikuchi = new Mob("きくちまさゆき", 300, 100, "「私と勝負しましょう」", "「完敗です」");
     Mob osana = new Mob("おさなゆうこ", 300, 100, "「こちらのプログラムを組んでください」", "「素晴らしいですね」");
     Mob matushita = new Mob("まつしたせんせい", 1000, 200, "「魔王なので宇宙が理解できます」", "「まさか私が負けるとは……」");
-
+    Mob goast = new Mob("ゆうれい", 300, 100, "「再勝負です」", "「また負けるとは……」");
+    
     Battle bt = new Battle();
     String[][] map_data;
     //プレイヤーの位置
@@ -173,6 +175,20 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         }
                     }
 
+                    if (map_data[i][j].equals("幽")) {
+                        Random r = new Random();
+                        int a = r.nextInt(5);
+                        if (a == 0) {
+                            double tmp_hp;
+                        System.out.println(goast.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), goast.getHp(), goast.getAtk());
+                        //判定の関数に渡す
+                        hantei(tmp_hp, goast.getTalk_end());
+                        map_data[i][j] = "幽";
+                        }
+                    }
+
                     if (map_data[i][j].equals("宇")) {
                         //仮のHPデータをここに入れる
                         double tmp_hp;
@@ -181,6 +197,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
                         //判定の関数に渡す
                         hantei(tmp_hp, uda.getTalk_end());
+                        map_data[i][j] = "幽";
                     }
 
                     if (map_data[i][j].equals("亀")) {
@@ -191,6 +208,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kameda.getHp(), kameda.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, kameda.getTalk_end());
+                        map_data[i][j] = "幽";
                     }
 
                     if (map_data[i][j].equals("志")) {
@@ -201,6 +219,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), shibata.getHp(), shibata.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, shibata.getTalk_end());
+                        map_data[i][j] = "幽";
                     }
 
                     if (map_data[i][j].equals("菊")) {
@@ -211,6 +230,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kikuchi.getHp(), kikuchi.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, kikuchi.getTalk_end());
+                        map_data[i][j] = "幽";
                     }
 
                     if (map_data[i][j].equals("長")) {
@@ -221,6 +241,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), osana.getHp(), osana.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, osana.getTalk_end());
+                        map_data[i][j] = "幽";
                     }
 
                     if (map_data[i][j].equals("魔")) {
@@ -287,7 +308,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
-                    
+
                 } else {
                     output += "[";
                     output += map_data[i][j];
