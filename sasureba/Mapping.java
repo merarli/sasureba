@@ -121,7 +121,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     output += "]";
 
                     if (map_data[i][j].equals("A")) {
-                        /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(sankosyo.getAtk());
@@ -132,7 +131,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("C")) {
-                        /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(note.getAtk());
@@ -143,7 +141,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("B")) {
-                        /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(kanpe.getAtk());
@@ -173,7 +170,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("S")) {
-                        /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(NotePC.getAtk());
