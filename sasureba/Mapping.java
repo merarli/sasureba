@@ -125,6 +125,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //攻撃力を返してもらい
                         player.setAtk(sankosyo.getAtk());
                         System.out.println("Aの武器を獲得");
+                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                         //拾ったら武器を消す
                         map_data[i][j] = "N";
@@ -135,6 +136,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //攻撃力を返してもらい
                         player.setAtk(note.getAtk());
                         System.out.println("Cの武器を獲得");
+                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                         //拾ったら武器を消す
                         map_data[i][j] = "N";
@@ -145,6 +147,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //攻撃力を返してもらい
                         player.setAtk(kanpe.getAtk());
                         System.out.println("Bの武器を獲得");
+                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                         //拾ったら武器を消す
                         map_data[i][j] = "N";
@@ -159,26 +162,16 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     if (map_data[i][j].equals("宝")) {
                         if (player.getHold_key() == 1) {
                             player.setAtk(NotePC.getAtk());
-                            System.out.println("宝箱が開いた" +"\n"+ "Sの武器を獲得");
+                            System.out.println("宝箱が開いた" + "\n" + "Sの武器を獲得");
 
                             //拾ったら武器を消す
                             map_data[i][j] = "N";
                             player.setHold_key(0);
-                        }else{
+                        } else {
                             System.out.println("鍵がないため開かない");
                         }
                     }
-
-                    if (map_data[i][j].equals("S")) {
-                        //Weponクラスに武器の攻撃力を決定してもらって
-                        //攻撃力を返してもらい
-                        player.setAtk(NotePC.getAtk());
-                        System.out.println("Sの武器を獲得");
-
-                        //拾ったら武器を消す
-                        map_data[i][j] = "N";
-                    }
-
+                    
                     if (map_data[i][j].equals("宇")) {
                         //仮のHPデータをここに入れる
                         double tmp_hp;
