@@ -167,13 +167,8 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             //拾ったら武器を消す
                             map_data[i][j] = "N";
                             player.setHold_key(0);
-<<<<<<< HEAD
-                        } else {
-                            System.out.println("鍵がないため開かない");
-=======
                         }else{
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
->>>>>>> 0c79517aee8fb381ae8adfc8fbee73c07bdafb1d
                         }
                     }
                     
