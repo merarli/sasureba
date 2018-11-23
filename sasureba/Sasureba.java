@@ -49,20 +49,28 @@ public class Sasureba {//目良
             {"神", "N", "A", "N", "魔"},
         };
 
-        Mapping map = new Mapping(map_data, 0, 0,0,0);
+        Mapping map = new Mapping(map_data, 0, 0,0,0,0);
 
         System.out.println(map.getMappingString());
 
         //[playerのHPが0より大きい]&[歩数が50以下]間ループ　
 //        while (player.getHp_now() > 0 && player.getStep_count() >= 50) {
-        while (map.getSibou_flg() == 0 && map.getHosu() < 50) {
+        while (map.getSibou_flg() == 0 && map.getHosu() < 50 && map.getBoss_flg() == 0) {
             System.out.println(map.getHosu());
             //テストですぐ抜けるようにした
 
 //            break;
             map.idou();
         }
-        System.out.println("ゲーム終了");
+        if(map.getBoss_flg() == 1){
+            System.out.println("松下先生を無事倒した");
+        }else if(map.getHosu() < 0){
+            System.out.println("留年した");
+        }else if(map.getSibou_flg() == 1){
+//            System.out.println("敗北した");
+        }
+        
+        
     }
 
 }

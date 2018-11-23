@@ -36,13 +36,23 @@ public class Mapping {  //目良　賢志 田中、モハメド
     int player_y;
     int sibou_flg;
     int hosu;
+    int boss_flg;
 
-    public Mapping(String[][] map_data, int player_x, int player_y, int sibou_flg, int hosu) {
+    public Mapping(String[][] map_data, int player_x, int player_y, int sibou_flg, int hosu, int boss_flg) {
         this.map_data = map_data;
         this.player_x = player_x;
         this.player_y = player_y;
         this.sibou_flg = sibou_flg;
         this.hosu = hosu;
+        this.boss_flg = boss_flg;
+    }
+
+    public int getBoss_flg() {
+        return boss_flg;
+    }
+
+    public void setBoss_flg(int boss_flg) {
+        this.boss_flg = boss_flg;
     }
 
     public int getSibou_flg() {
@@ -231,6 +241,9 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), matushita.getHp(), matushita.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, matushita.getTalk_end());
+                        if(player.getHp_now() > 0){
+                            boss_flg = 1;
+                        }
                     }
                     //HP全回復
                     if (map_data[i][j].equals("神")) {
