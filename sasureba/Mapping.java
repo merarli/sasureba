@@ -114,6 +114,16 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     output += "勇";
                     output += "]";
 
+                    if (map_data[i][j].equals("宇")) {
+                        //仮のHPデータをここに入れる
+                        double tmp_hp;
+                        System.out.println(uda.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
+                        //判定の関数に渡す
+                        hantei(tmp_hp, uda.getTalk_end());
+                    }
+                    
                     if (map_data[i][j].equals("A")) {
                         /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
@@ -137,12 +147,12 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("宇")) {
-                        //仮のHPデータをここにいれる
+                        //仮のHPデータをここに入れる
                         double tmp_hp;
                         System.out.println(uda.talk_start);
                         //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
-                        //判定の関数にわたす
+                        //判定の関数に渡す
                         hantei(tmp_hp, uda.getTalk_end());
                     }
 
