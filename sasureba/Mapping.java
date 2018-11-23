@@ -22,12 +22,12 @@ public class Mapping {  //目良　賢志 田中、モハメド
     Wepon kanpe = new Wepon("カンニングペーパー", "B", 160, 200);
     Wepon NotePC = new Wepon("ノートパソコン", "S", 260, 300);
 
-    Mob uda = new Mob("うだりゅうじ", 300, 100, "RSAを手計算で求めよ", "解けただとぉ？");
+    Mob uda = new Mob("うだりゅうじ", 300, 100, "「RSAを手計算で求めよ」", "「解けただとぉ？」");
     Mob kameda = new Mob("かめだひろゆき", 300, 100, "（壇上でくるくる回っている）", "(目が回って倒れた)");
-    Mob shibata = new Mob("しばたちひろ", 300, 100, "わたしのAIと勝負です", "お見事です");
-    Mob kikuchi = new Mob("きくちまさゆき", 300, 100, "私と勝負しましょう", "完敗です");
-    Mob osana = new Mob("おさなゆうこ", 300, 100, "こちらのプログラムを組んでください", "素晴らしいですね");
-    Mob matushita = new Mob("まつしたせんせい", 1000, 200, "魔王なので宇宙が理解できます", "まさか私が負けるとは……");
+    Mob shibata = new Mob("しばたちひろ", 300, 100, "「わたしのAIと勝負です」", "「お見事です」");
+    Mob kikuchi = new Mob("きくちまさゆき", 300, 100, "「私と勝負しましょう」", "「完敗です」");
+    Mob osana = new Mob("おさなゆうこ", 300, 100, "「こちらのプログラムを組んでください」", "「素晴らしいですね」");
+    Mob matushita = new Mob("まつしたせんせい", 1000, 200, "「魔王なので宇宙が理解できます」", "「まさか私が負けるとは……」");
 
     Battle bt = new Battle();
     String[][] map_data;
@@ -168,7 +168,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             map_data[i][j] = "N";
                             player.setHold_key(0);
                         }else{
-                            System.out.println("鍵がないため開かない");
+                            System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
                         }
                     }
 
