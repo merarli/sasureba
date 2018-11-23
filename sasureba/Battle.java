@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author C0116116
  * @author c0114336
  */
-public class Battle {   //田中 亮
+public class Battle {   //田中 亮　金、高山
 
     double user_hp;
     double user_atk;
