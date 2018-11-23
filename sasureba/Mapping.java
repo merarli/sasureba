@@ -18,10 +18,16 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
     //武器の作成
     Wepon note = new Wepon("ノート", "C", 110, 150);
-    Wepon sankosyo = new Wepon("参考書", "A", 200, 250);
+    Wepon sankosyo = new Wepon("参考書", "A", 210, 250);
+    Wepon kanpe = new Wepon("カンニングペーパー", "B", 160, 200);
+    Wepon NotePC = new Wepon("ノートパソコン", "S", 260, 300);
 
     Mob uda = new Mob("うだりゅうじ", 300, 100, "RSAを手計算で求めよ", "解けただとぉ？");
-    Mob matushita = new Mob("まつしたせんせい", 1000, 200, "魔王なので宇宙が理解できます", "すばらしいです");
+    Mob kameda = new Mob("かめだひろゆき", 300, 100, "（壇上でくるくる回っている）", "(目が回って倒れた)");
+    Mob shibata = new Mob("しばたちひろ", 300, 100, "わたしのAIと勝負です", "お見事です");
+    Mob kikuchi = new Mob("きくちまさゆき", 300, 100, "私と勝負しましょう", "完敗です");
+    Mob osana = new Mob("おさなゆうこ", 300, 100, "こちらのプログラムを組んでください", "素晴らしいですね");
+    Mob matushita = new Mob("まつしたせんせい", 1000, 200, "魔王なので宇宙が理解できます", "まさか私が負けるとは……");
 
     Battle bt = new Battle();
     String[][] map_data;
@@ -146,6 +152,28 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         map_data[i][j] = "N";
                     }
 
+                    if (map_data[i][j].equals("B")) {
+                        /*ここだれか書いて！！！！！！！！*/
+                        //Weponクラスに武器の攻撃力を決定してもらって
+                        //攻撃力を返してもらい
+                        player.setAtk(kanpe.getAtk());
+                        System.out.println("Bの武器を獲得");
+
+                        //拾ったら武器を消す
+                        map_data[i][j] = "N";
+                    }
+
+                    if (map_data[i][j].equals("S")) {
+                        /*ここだれか書いて！！！！！！！！*/
+                        //Weponクラスに武器の攻撃力を決定してもらって
+                        //攻撃力を返してもらい
+                        player.setAtk(NotePC.getAtk());
+                        System.out.println("Sの武器を獲得");
+
+                        //拾ったら武器を消す
+                        map_data[i][j] = "N";
+                    }
+
                     if (map_data[i][j].equals("宇")) {
                         //仮のHPデータをここに入れる
                         double tmp_hp;
@@ -154,6 +182,46 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
                         //判定の関数に渡す
                         hantei(tmp_hp, uda.getTalk_end());
+                    }
+
+                    if (map_data[i][j].equals("亀")) {
+                        //仮のHPデータをここにいれる
+                        double tmp_hp;
+                        System.out.println(kameda.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kameda.getHp(), kameda.getAtk());
+                        //判定の関数にわたす
+                        hantei(tmp_hp, kameda.getTalk_end());
+                    }
+
+                    if (map_data[i][j].equals("志")) {
+                        //仮のHPデータをここにいれる
+                        double tmp_hp;
+                        System.out.println(shibata.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), shibata.getHp(), shibata.getAtk());
+                        //判定の関数にわたす
+                        hantei(tmp_hp, shibata.getTalk_end());
+                    }
+
+                    if (map_data[i][j].equals("菊")) {
+                        //仮のHPデータをここにいれる
+                        double tmp_hp;
+                        System.out.println(kikuchi.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kikuchi.getHp(), kikuchi.getAtk());
+                        //判定の関数にわたす
+                        hantei(tmp_hp, kikuchi.getTalk_end());
+                    }
+
+                    if (map_data[i][j].equals("長")) {
+                        //仮のHPデータをここにいれる
+                        double tmp_hp;
+                        System.out.println(osana.talk_start);
+                        //データをセットしてBattle開始
+                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), osana.getHp(), osana.getAtk());
+                        //判定の関数にわたす
+                        hantei(tmp_hp, osana.getTalk_end());
                     }
 
                     if (map_data[i][j].equals("魔")) {
