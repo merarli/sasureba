@@ -61,7 +61,7 @@ public class Wepon {   //金貴哉
         Random rand = new Random();
         int dif = (int)atk_max - (int)atk_min;
         double atk = rand.nextInt(dif) + atk_min ;
-        System.out.println(atk);
+        //System.out.println(atk);
         return atk;    
     }
 
