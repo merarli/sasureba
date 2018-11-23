@@ -167,11 +167,11 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             //拾ったら武器を消す
                             map_data[i][j] = "N";
                             player.setHold_key(0);
-                        }else{
+                        } else {
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
                         }
                     }
-                    
+
                     if (map_data[i][j].equals("宇")) {
                         //仮のHPデータをここに入れる
                         double tmp_hp;
@@ -237,6 +237,56 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         player.setHp_now(player.getHp_max());
                     }
 
+                    try {
+                        if (map_data[i + 1][j].equals("魔")) {
+                            System.out.println("ギターの音が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    try {
+                        if (map_data[i - 1][j].equals("魔")) {
+                            System.out.println("ギターの音が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    try {
+                        if (map_data[i][j + 1].equals("魔")) {
+                            System.out.println("ギターの音が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    try {
+                        if (map_data[i][j - 1].equals("魔")) {
+                            System.out.println("ギターの音が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+
+                    try {
+                        if (map_data[i + 1][j].equals("神")) {
+                            System.out.println("オランダ語が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    try {
+                        if (map_data[i - 1][j].equals("神")) {
+                            System.out.println("オランダ語が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    try {
+                        if (map_data[i][j + 1].equals("神")) {
+                            System.out.println("オランダ語が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    try {
+                        if (map_data[i][j - 1].equals("神")) {
+                            System.out.println("オランダ語が聞こえる");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                    }
+                    
                 } else {
                     output += "[";
                     output += map_data[i][j];

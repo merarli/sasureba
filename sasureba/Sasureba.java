@@ -46,7 +46,7 @@ public class Sasureba {//目良
             {"菊", "志", "N", "B", "N"},
             {"長", "B", "N", "鍵", "宝"},
             {"亀", "N", "C", "N", "宇"},
-            {"神", "N", "A", "N", "魔"}
+            {"神", "N", "A", "N", "魔"},
         };
 
         Mapping map = new Mapping(map_data, 0, 0,0,0);
