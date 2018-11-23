@@ -38,13 +38,23 @@ public class Mapping {  //目良　賢志 田中、モハメド
     int player_y;
     int sibou_flg;
     int hosu;
+    int boss_flg;
 
-    public Mapping(String[][] map_data, int player_x, int player_y, int sibou_flg, int hosu) {
+    public Mapping(String[][] map_data, int player_x, int player_y, int sibou_flg, int hosu, int boss_flg) {
         this.map_data = map_data;
         this.player_x = player_x;
         this.player_y = player_y;
         this.sibou_flg = sibou_flg;
         this.hosu = hosu;
+        this.boss_flg = boss_flg;
+    }
+
+    public int getBoss_flg() {
+        return boss_flg;
+    }
+
+    public void setBoss_flg(int boss_flg) {
+        this.boss_flg = boss_flg;
     }
 
     public int getSibou_flg() {
@@ -126,7 +136,8 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(sankosyo.getAtk());
-                        System.out.println("Aの武器を獲得");
+                        System.out.println("各種参考書を見つけた");
+                        System.out.println("「心強い武器だけどやっぱり重いな」");
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                         //拾ったら武器を消す
@@ -137,7 +148,8 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(note.getAtk());
-                        System.out.println("Cの武器を獲得");
+                        System.out.println("授業内容をメモしたノートを発見した");
+                        System.out.println("「ノートの整理はしっかりしないとね」");
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                         //拾ったら武器を消す
@@ -148,7 +160,8 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(kanpe.getAtk());
-                        System.out.println("Bの武器を獲得");
+                        System.out.println("カンニングペーパーの作成に成功した");
+                        System.out.println("「これでテストはばっちりだ！！」");
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                         //拾ったら武器を消す
@@ -164,7 +177,8 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     if (map_data[i][j].equals("宝")) {
                         if (player.getHold_key() == 1) {
                             player.setAtk(NotePC.getAtk());
-                            System.out.println("宝箱が開いた" + "\n" + "Sの武器を獲得");
+                            System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
+                            System.out.println("「なんで宝箱に充電器なんて入れたんだろう」");
                             System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
 
                             //拾ったら武器を消す
@@ -252,6 +266,9 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), matushita.getHp(), matushita.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, matushita.getTalk_end());
+                        if(player.getHp_now() > 0){
+                            boss_flg = 1;
+                        }
                     }
                     //HP全回復
                     if (map_data[i][j].equals("神")) {
