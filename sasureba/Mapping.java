@@ -153,6 +153,25 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         map_data[i][j] = "N";
                     }
 
+                    if (map_data[i][j].equals("鍵")) {
+                        player.setHold_key(1);
+                        System.out.println("鍵を入手した");
+                        map_data[i][j] = "N";
+                    }
+
+                    if (map_data[i][j].equals("宝")) {
+                        if (player.getHold_key() == 1) {
+                            player.setAtk(NotePC.getAtk());
+                            System.out.println("宝箱が開いた" +"\n"+ "Sの武器を獲得");
+
+                            //拾ったら武器を消す
+                            map_data[i][j] = "N";
+                            player.setHold_key(0);
+                        }else{
+                            System.out.println("鍵がないため開かない");
+                        }
+                    }
+
                     if (map_data[i][j].equals("S")) {
                         /*ここだれか書いて！！！！！！！！*/
                         //Weponクラスに武器の攻撃力を決定してもらって
