@@ -129,7 +129,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
                 if (player_x == j && player_y == i) {
                     output += "[";
-                    output += "勇者";
+                    output += "太郎";
                     output += "]";
 
                     if (map_data[i][j].equals(" A  ")) {
