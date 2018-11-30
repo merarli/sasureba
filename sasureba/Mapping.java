@@ -129,10 +129,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
                 if (player_x == j && player_y == i) {
                     output += "[";
-                    output += "勇";
+                    output += "勇者";
                     output += "]";
 
-                    if (map_data[i][j].equals("A ")) {
+                    if (map_data[i][j].equals(" A  ")) {
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(sankosyo.getAtk());
@@ -141,10 +141,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = "N ";
+                        map_data[i][j] = " N  ";
                     }
 
-                    if (map_data[i][j].equals("C ")) {
+                    if (map_data[i][j].equals(" C  ")) {
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(note.getAtk());
@@ -153,10 +153,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = "N ";
+                        map_data[i][j] = " N  ";
                     }
 
-                    if (map_data[i][j].equals("B ")) {
+                    if (map_data[i][j].equals(" B  ")) {
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(kanpe.getAtk());
@@ -165,16 +165,16 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = "N ";
+                        map_data[i][j] = " N  ";
                     }
 
-                    if (map_data[i][j].equals("鍵")) {
+                    if (map_data[i][j].equals(" 鍵 ")) {
                         player.setHold_key(1);
                         System.out.println("鍵を入手した");
-                        map_data[i][j] = "N ";
+                        map_data[i][j] = " N  ";
                     }
 
-                    if (map_data[i][j].equals("宝")) {
+                    if (map_data[i][j].equals(" 宝 ")) {
                         if (player.getHold_key() == 1) {
                             player.setAtk(NotePC.getAtk());
                             System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
@@ -182,14 +182,14 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                             //拾ったら武器を消す
-                            map_data[i][j] = "N ";
+                            map_data[i][j] = " N  ";
                             player.setHold_key(0);
                         } else {
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
                         }
                     }
 
-                    if (map_data[i][j].equals("幽")) {
+                    if (map_data[i][j].equals("幽霊")) {
                         Random r = new Random();
                         int a = r.nextInt(5);
                         if (a == 0) {
@@ -199,11 +199,11 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), goast.getHp(), goast.getAtk());
                         //判定の関数に渡す
                         hantei(tmp_hp, goast.getTalk_end());
-                        map_data[i][j] = "幽";
+                        map_data[i][j] = "幽霊";
                         }
                     }
 
-                    if (map_data[i][j].equals("宇")) {
+                    if (map_data[i][j].equals("宇田")) {
                         //仮のHPデータをここに入れる
                         double tmp_hp;
                         System.out.println(uda.talk_start);
@@ -211,10 +211,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), uda.getHp(), uda.getAtk());
                         //判定の関数に渡す
                         hantei(tmp_hp, uda.getTalk_end());
-                        map_data[i][j] = "幽";
+                        map_data[i][j] = "幽霊";
                     }
 
-                    if (map_data[i][j].equals("亀")) {
+                    if (map_data[i][j].equals("亀田")) {
                         //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(kameda.talk_start);
@@ -222,10 +222,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kameda.getHp(), kameda.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, kameda.getTalk_end());
-                        map_data[i][j] = "幽";
+                        map_data[i][j] = "幽霊";
                     }
 
-                    if (map_data[i][j].equals("志")) {
+                    if (map_data[i][j].equals("柴田")) {
                         //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(shibata.talk_start);
@@ -233,10 +233,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), shibata.getHp(), shibata.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, shibata.getTalk_end());
-                        map_data[i][j] = "幽";
+                        map_data[i][j] = "幽霊";
                     }
 
-                    if (map_data[i][j].equals("菊")) {
+                    if (map_data[i][j].equals("菊池")) {
                         //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(kikuchi.talk_start);
@@ -244,10 +244,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kikuchi.getHp(), kikuchi.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, kikuchi.getTalk_end());
-                        map_data[i][j] = "幽";
+                        map_data[i][j] = "幽霊";
                     }
 
-                    if (map_data[i][j].equals("長")) {
+                    if (map_data[i][j].equals("長名")) {
                         //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(osana.talk_start);
@@ -255,10 +255,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), osana.getHp(), osana.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, osana.getTalk_end());
-                        map_data[i][j] = "幽";
+                        map_data[i][j] = "幽霊";
                     }
 
-                    if (map_data[i][j].equals("魔")) {
+                    if (map_data[i][j].equals("松下")) {
                         //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(matushita.talk_start);
@@ -271,56 +271,56 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         }
                     }
                     //HP全回復
-                    if (map_data[i][j].equals("神")) {
+                    if (map_data[i][j].equals("ｸﾞﾘﾑ")) {
                         System.out.println("クリムベルゲン先生によりHPが全回復した！");
                         player.setHp_now(player.getHp_max());
                     }
 
                     try {
-                        if (map_data[i + 1][j].equals("魔")) {
+                        if (map_data[i + 1][j].equals("松下")) {
                             System.out.println("ギターの音が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                     try {
-                        if (map_data[i - 1][j].equals("魔")) {
+                        if (map_data[i - 1][j].equals("松下")) {
                             System.out.println("ギターの音が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                     try {
-                        if (map_data[i][j + 1].equals("魔")) {
+                        if (map_data[i][j + 1].equals("松下")) {
                             System.out.println("ギターの音が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                     try {
-                        if (map_data[i][j - 1].equals("魔")) {
+                        if (map_data[i][j - 1].equals("松下")) {
                             System.out.println("ギターの音が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
 
                     try {
-                        if (map_data[i + 1][j].equals("神")) {
+                        if (map_data[i + 1][j].equals("ｸﾞﾘﾑ")) {
                             System.out.println("オランダ語が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                     try {
-                        if (map_data[i - 1][j].equals("神")) {
+                        if (map_data[i - 1][j].equals("ｸﾞﾘﾑ")) {
                             System.out.println("オランダ語が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                     try {
-                        if (map_data[i][j + 1].equals("神")) {
+                        if (map_data[i][j + 1].equals("ｸﾞﾘﾑ")) {
                             System.out.println("オランダ語が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                     try {
-                        if (map_data[i][j - 1].equals("神")) {
+                        if (map_data[i][j - 1].equals("ｸﾞﾘﾑ")) {
                             System.out.println("オランダ語が聞こえる");
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
