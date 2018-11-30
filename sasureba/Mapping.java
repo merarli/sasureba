@@ -132,46 +132,46 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     output += "勇";
                     output += "]";
 
-                    if (map_data[i][j].equals("A")) {
+                    if (map_data[i][j].equals("A ")) {
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(sankosyo.getAtk());
                         System.out.println("各種参考書を見つけた");
                         System.out.println("「心強い武器だけどやっぱり重いな」");
-                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
+                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = "N";
+                        map_data[i][j] = "N ";
                     }
 
-                    if (map_data[i][j].equals("C")) {
+                    if (map_data[i][j].equals("C ")) {
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(note.getAtk());
                         System.out.println("授業内容をメモしたノートを発見した");
                         System.out.println("「ノートの整理はしっかりしないとね」");
-                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
+                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = "N";
+                        map_data[i][j] = "N ";
                     }
 
-                    if (map_data[i][j].equals("B")) {
+                    if (map_data[i][j].equals("B ")) {
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
                         player.setAtk(kanpe.getAtk());
                         System.out.println("カンニングペーパーの作成に成功した");
                         System.out.println("「これでテストはばっちりだ！！」");
-                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
+                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = "N";
+                        map_data[i][j] = "N ";
                     }
 
                     if (map_data[i][j].equals("鍵")) {
                         player.setHold_key(1);
                         System.out.println("鍵を入手した");
-                        map_data[i][j] = "N";
+                        map_data[i][j] = "N ";
                     }
 
                     if (map_data[i][j].equals("宝")) {
@@ -179,10 +179,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             player.setAtk(NotePC.getAtk());
                             System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
                             System.out.println("「なんで宝箱に充電器なんて入れたんだろう」");
-                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に上がった");
+                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                             //拾ったら武器を消す
-                            map_data[i][j] = "N";
+                            map_data[i][j] = "N ";
                             player.setHold_key(0);
                         } else {
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
