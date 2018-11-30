@@ -1,5 +1,5 @@
 
-        /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -34,15 +34,20 @@ public class Sasureba {//目良
                 + "太郎「本当ですか！？　ありがとうございます！！」\n"
                 + "\n"
                 + "――こうして僕は松下先生が研究室に作り出したダンジョンを攻略する事になった。\n"
-                + "そのためにグリムベルゲン先生に頼み込んで協力してもらえることになったし、\n"
-                + "温情をくれた松下先生とこんな僕に協力してくれたグリムベルゲン先生のために、絶対に松下先生を倒してこの学校を卒業するんだ！！―wwawwwasdd―");
+                + "そのためにグリムベルゲン先生に頼み込んで協力してもらえることになったし。\n"
+                + "温情をくれた松下先生とこんな僕に協力してくれたグリムベルゲン先生のためにもｄ、絶対に松下先生を倒してこの学校を卒業するんだ！！―wwawwwasdd―"
+                + "\n"
+                + "\n"
+                + "松下「さて……ギター弾きながら待つとするか」"
+                + "\n"
+                + "\n");
 
-        System.out.println("マップ内に存在する様々な武器を拾い、敵を倒しレベルを上げて松下先生を倒そう" + "\n" + "マップのどこかに存在するグリムベルゲン先生を探し出すと回復してくれるぞ！　しかし連続では使用できないので注意しよう" + "\n" + "宝箱は鍵しないと開けられないぞ！　宝箱の中には強力な武器が入っているため是非とも手にいれよう");
+        System.out.println("マップ内に存在する様々な武器を拾い、敵を倒しレベルを上げて松下先生を倒そう" 
+                + "\n" + "マップのどこかに存在するグリムベルゲン先生を探し出すと回復してくれるぞ！　しかし連続では使用できないので注意しよう" 
+                + "\n" + "宝箱は鍵がないと開けられないぞ！　宝箱の中には強力な武器が入っているため是非とも手にいれよう");
 
         //勝敗条件
         System.out.println("勝利条件：松下先生を倒そう　敗北条件：勇者の敗北");
-
-
 
         //マップの作成
         String[][] map_data = {
@@ -50,10 +55,9 @@ public class Sasureba {//目良
             {"菊", "志", "N ", "B ", "N "},
             {"長", "B ", "N ", "鍵", "宝"},
             {"亀", "N ", "C ", "N ", "宇"},
-            {"神", "N ", "A ", "N ", "魔"},
-        };
+            {"神", "N ", "A ", "N ", "魔"},};
 
-        Mapping map = new Mapping(map_data, 0, 0,0,0,0);
+        Mapping map = new Mapping(map_data, 0, 0, 0, 0, 0);
 
         System.out.println(map.getMappingString());
 
@@ -66,15 +70,14 @@ public class Sasureba {//目良
 //            break;
             map.idou();
         }
-        if(map.getBoss_flg() == 1){
+        if (map.getBoss_flg() == 1) {
             System.out.println("松下先生を無事倒した");
-        }else if(map.getHosu() < 0){
+        } else if (map.getHosu() < 0) {
             System.out.println("留年した");
-        }else if(map.getSibou_flg() == 1){
+        } else if (map.getSibou_flg() == 1) {
 //            System.out.println("敗北した");
         }
-        
-        
+
     }
 
 }
