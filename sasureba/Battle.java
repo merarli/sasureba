@@ -46,7 +46,7 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                 rnd = min + (Math.random() * (max - min));
                 System.out.println("全力で攻撃します");
                 //攻撃処理
-                System.out.println(this.mob_atk * rnd + "のダメージを受けた");
+                System.out.println(this.mob_atk * rnd + "のダメージを与えた");
                 this.mob_hp = this.mob_hp - (this.user_atk * rnd);
                 System.out.println("敵の残り体力：" + this.mob_hp);
 
@@ -72,6 +72,7 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                 rnd = min + (Math.random() * (max - min));
                 System.out.println("手加減して攻撃します");
                 //攻撃処理.
+                System.out.println(((this.user_atk * 0.6) * rnd) + "のダメージを与えた");
                 this.mob_hp = this.mob_hp - (this.user_atk * 0.6) * rnd;
                 System.out.println("敵の残り体力：" + this.mob_hp);
 
@@ -81,6 +82,7 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                     double mmax = 0.8;
                     rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃を受けた");
+                    System.out.println(((this.mob_atk * rndm) * 0.5) + "のダメージを受けた");
                     this.user_hp = this.user_hp - (this.mob_atk * rndm) * 0.5;
                     System.out.println("あなたの残り体力：" + this.user_hp);
                 }
