@@ -91,7 +91,7 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                     rndm = mmin + (Math.random() * (mmax - mmin));
                     System.out.println("敵の攻撃");
                     System.out.println((int) ((this.mob_atk * rndm) * 0.5) + "のダメージを受けた");
-                    this.user_hp = this.user_hp - (int) (this.mob_atk * rndm) * 0.5;
+                    this.user_hp = this.user_hp - (int) ((this.mob_atk * rndm) * 0.5);
                     System.out.println("あなたの残り体力：" + (int) this.user_hp);
                 }
             }
