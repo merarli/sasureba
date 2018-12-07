@@ -123,7 +123,7 @@ public class Sasureba {//目良
                 if (key.equals("")) {
                     System.out.println("――こうして僕は来年も東京工科大学の生徒として一年間過ごすことが決まってしまったのだった――");
                 }
-            } else if (map.getHosu() < 0) {
+            } else if (map.getHosu() >= 50) {
                 System.out.println("留年した");
             } else if (map.getSibou_flg() == 1) {
                 System.out.println("敗北した");
