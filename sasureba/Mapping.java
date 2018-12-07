@@ -81,6 +81,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
             } else {
                 System.out.println("上に移動しました");
                 player_y = player_y - 1;
+                this.hosu++;
             }
         }
 
