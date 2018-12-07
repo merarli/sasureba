@@ -46,11 +46,11 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                 rnd = min + (Math.random() * (max - min));
                 System.out.println("全力で攻撃します");
                 //攻撃処理
-                System.out.println(this.mob_atk * rnd + "のダメージを与えた");
+                System.out.println(this.user_atk * rnd + "のダメージを与えた");
                 this.mob_hp = this.mob_hp - (this.user_atk * rnd);
                 System.out.println("敵の残り体力：" + this.mob_hp);
 
-                if (this.mob_hp != 0) {
+                if (this.mob_hp > 0) {
                     double rndm;
                     double mmin = 0.1;
                     double mmax = 0.8;
@@ -76,7 +76,7 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                 this.mob_hp = this.mob_hp - (this.user_atk * 0.6) * rnd;
                 System.out.println("敵の残り体力：" + this.mob_hp);
 
-                if (this.mob_hp != 0) {
+                if (this.mob_hp > 0) {
                     double rndm;
                     double mmin = 0.1;
                     double mmax = 0.8;
