@@ -9,9 +9,8 @@ package sasureba;
  *
  * @author merarli
  */
-
-
 public class User {   //目良　賢志、金
+
     double hp_now;
     double hp_max;
     double gpa;
@@ -69,7 +68,6 @@ public class User {   //目良　賢志、金
         this.atk = atk;
     }
 
-
     public int getHold_key() {
         return hold_key;
     }
@@ -77,8 +75,5 @@ public class User {   //目良　賢志、金
     public void setHold_key(int hold_key) {
         this.hold_key = hold_key;
     }
-    
-    
 
-    
 }
