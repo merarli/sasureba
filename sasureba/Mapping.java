@@ -39,6 +39,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
     int sibou_flg;
     int hosu;
     int boss_flg;
+    int seigen = 0;
 
     public Mapping(String[][] map_data, int player_x, int player_y, int sibou_flg, int hosu, int boss_flg) {
         this.map_data = map_data;
@@ -83,6 +84,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 player_y = player_y - 1;
                 this.hosu++;
                 System.out.println(this.hosu + "歩移動しました");
+                seigen++;
             }
         }
 
@@ -95,6 +97,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 player_y = player_y + 1;
                 this.hosu++;
                 System.out.println(this.hosu + "歩移動しました");
+                seigen++;
             }
         }
 
@@ -107,6 +110,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 player_x = player_x + 1;
                 hosu++;
                 System.out.println(this.hosu + "歩移動しました");
+                seigen++;
             }
         }
 
@@ -120,6 +124,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 player_x = player_x - 1;
                 hosu++;
                 System.out.println(this.hosu + "歩移動しました");
+                seigen++;
             }
         }
 
@@ -284,8 +289,13 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
                     //HP全回復
                     if (map_data[i][j].equals("ｸﾞﾘﾑ")) {
-                        System.out.println("クリムベルゲン先生によりHPが全回復した！");
-                        player.setHp_now(player.getHp_max());
+                        if (seigen >= 5) {
+                            player.setHp_now(player.getHp_max());
+                            System.out.println("クリムベルゲン先生によりHPが全回復した！");
+                            seigen = 0;
+                        }else{
+                            System.out.println("クリムベルゲン先生は外出中だ！回復できなかった");
+                        }
                     }
 
                     try {
@@ -373,7 +383,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
             System.out.println("プレイヤーのHPが上昇した");
-            System.out.println("プレイヤーHP:" + (int)player.getHp_now());
+            System.out.println("プレイヤーHP:" + (int) player.getHp_now());
 
         } else {
             //負けたときの処理
