@@ -90,13 +90,7 @@ public class Sasureba {//目良
                 map.idou();
 
             }
-            if (map.getBoss_flg() == 1) {
-                System.out.println("松下先生を無事倒した");
-            } else if (map.getHosu() < 0) {
-                System.out.println("留年した");
-            } else if (map.getSibou_flg() == 1) {
-                map.idou();
-            }
+            
             if (map.getBoss_flg() == 1) {
                 System.out.println("松下先生を無事倒した\n"
                         + "松下先生「ぐぅっ！ まさか本当に私を倒すとは……」\n"
