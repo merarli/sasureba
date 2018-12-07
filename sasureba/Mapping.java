@@ -384,6 +384,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     output += "[";
                     output += "＠＠";
                     output += "]";
+                    
                 }
                 
 
