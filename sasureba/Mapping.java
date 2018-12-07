@@ -412,13 +412,10 @@ public class Mapping {  //目良　賢志 田中、モハメド
 //            System.out.println(talk_start);
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
-<<<<<<< HEAD
             System.out.println("プレイヤーのGPAが上昇した");
             System.out.println("プレイヤーGPA:" + String.format("%.1f", player.getGpa()));
-=======
             System.out.println("太郎のGPAが上昇した");
             System.out.println("現在のGPA:" + String.format("%.1f",player.getGpa()));
->>>>>>> 682d3f3b76de6451a12f25648419d41809f81430
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
             System.out.println("太郎のHPが上昇した");
