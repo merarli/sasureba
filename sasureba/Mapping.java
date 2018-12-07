@@ -151,8 +151,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
-                            //拾ったら武器を消す
-                            map_data[i][j] = "----";
+                            
                         } else if (key.equals("n")) {
                             map_data[i][j] = " A  ";
                         }
@@ -172,8 +171,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
-                            //拾ったら武器を消す
-                            map_data[i][j] = "----";
+                            
                         } else if (key.equals("n")) {
                             map_data[i][j] = " C  ";
                         }
@@ -193,8 +191,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
-                            //拾ったら武器を消す
-                            map_data[i][j] = "----";
+                            
                         } else if (key.equals("n")) {
                             map_data[i][j] = " C  ";
                         }
