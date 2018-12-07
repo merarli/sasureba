@@ -141,7 +141,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = " N  ";
+                        map_data[i][j] = "----";
                     }
 
                     if (map_data[i][j].equals(" C  ")) {
@@ -153,7 +153,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = " N  ";
+                        map_data[i][j] = "----";
                     }
 
                     if (map_data[i][j].equals(" B  ")) {
@@ -165,13 +165,13 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                         //拾ったら武器を消す
-                        map_data[i][j] = " N  ";
+                        map_data[i][j] = "----";
                     }
 
                     if (map_data[i][j].equals(" 鍵 ")) {
                         player.setHold_key(1);
                         System.out.println("鍵を入手した");
-                        map_data[i][j] = " N  ";
+                        map_data[i][j] = "----";
                     }
 
                     if (map_data[i][j].equals(" 宝 ")) {
@@ -182,7 +182,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                             //拾ったら武器を消す
-                            map_data[i][j] = " N  ";
+                            map_data[i][j] = "----";
                             player.setHold_key(0);
                         } else {
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
