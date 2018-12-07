@@ -46,20 +46,24 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                 rnd = min + (Math.random() * (max - min));
                 System.out.println("全力で攻撃します");
                 //攻撃処理
-                System.out.println(this.mob_atk * rnd + "のダメージを受けた");
-                this.mob_hp = this.mob_hp - (this.user_atk * rnd);
-                System.out.println("敵の残り体力：" + this.mob_hp);
+                System.out.println((int) (this.user_atk * rnd) + "のダメージを与えた");
+                this.mob_hp = this.mob_hp - (int) (this.user_atk * rnd);
+                if (this.mob_hp > 0) {
+                    System.out.println("敵の残り体力：" + (int) this.mob_hp);
+                } else {
+                    System.out.println("敵の残り体力：" + 0);
+                }
 
-                if (this.mob_hp != 0) {
+                if (this.mob_hp > 0) {
                     double rndm;
                     double mmin = 0.1;
                     double mmax = 0.8;
                     //randomメソッドでmin～maxの整数を生成
                     rndm = mmin + (Math.random() * (mmax - mmin));
-                    System.out.println("敵の攻撃を受けた");
-                    System.out.println(this.mob_atk * rndm + "のダメージを受けた");
-                    this.user_hp = this.user_hp - (this.mob_atk * rndm);
-                    System.out.println("あなたの残り体力：" + this.user_hp);
+                    System.out.println("敵の攻撃");
+                    System.out.println((int) (this.mob_atk * rndm) + "のダメージを受けた");
+                    this.user_hp = this.user_hp - (int) (this.mob_atk * rndm);
+                    System.out.println("あなたの残り体力：" + (int) this.user_hp);
                 }
             }
 
@@ -72,17 +76,23 @@ public class Battle {   //田中 金　高山　　骨組み(目良)
                 rnd = min + (Math.random() * (max - min));
                 System.out.println("手加減して攻撃します");
                 //攻撃処理.
-                this.mob_hp = this.mob_hp - (this.user_atk * 0.6) * rnd;
-                System.out.println("敵の残り体力：" + this.mob_hp);
+                System.out.println((int) ((this.user_atk * 0.6) * rnd) + "のダメージを与えた");
+                this.mob_hp = this.mob_hp - (int) ((this.user_atk * 0.6) * rnd);
+                if (this.mob_hp > 0) {
+                    System.out.println("敵の残り体力：" + (int) this.mob_hp);
+                } else {
+                    System.out.println("敵の残り体力：" + 0);
+                }
 
-                if (this.mob_hp != 0) {
+                if (this.mob_hp > 0) {
                     double rndm;
                     double mmin = 0.1;
                     double mmax = 0.8;
                     rndm = mmin + (Math.random() * (mmax - mmin));
-                    System.out.println("敵の攻撃を受けた");
-                    this.user_hp = this.user_hp - (this.mob_atk * rndm) * 0.5;
-                    System.out.println("あなたの残り体力：" + this.user_hp);
+                    System.out.println("敵の攻撃");
+                    System.out.println((int) ((this.mob_atk * rndm) * 0.5) + "のダメージを受けた");
+                    this.user_hp = this.user_hp - (int) (this.mob_atk * rndm) * 0.5;
+                    System.out.println("あなたの残り体力：" + (int) this.user_hp);
                 }
             }
         }
