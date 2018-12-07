@@ -188,6 +188,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
                         }
                     }
+                            
 
                     if (map_data[i][j].equals("幽霊")) {
                         Random r = new Random();
