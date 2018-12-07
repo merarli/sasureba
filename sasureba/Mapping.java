@@ -194,7 +194,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                                     + "太郎の攻撃力が" + player.getAtk() + "に変化した");
                             map_data[i][j] = "----";
                         } else if (key.equals("n")) {
-                            map_data[i][j] = " C  ";
+                            map_data[i][j] = " B  ";
                         }
                     }
 
