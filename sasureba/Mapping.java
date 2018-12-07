@@ -203,14 +203,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
                     if (map_data[i][j].equals(" 宝 ")) {
                         if (player.getHold_key() == 1) {
-                            player.setAtk(NotePC.getAtk());
-                            System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
-                            System.out.println("「なんで宝箱に充電器なんて入れたんだろう」");
-                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
-                            //拾ったら武器を消す
-                            map_data[i][j] = "----";
-                            player.setHold_key(0);
                             Scanner scanner = new Scanner(System.in);
                             System.out.println("宝箱を発見した" + "\n" + "鍵を持っているため開ける事ができます。開けますか？" + "\n" + "開ける場合はyを、開けない場合はnを入力してください");
                             String key = scanner.next();
