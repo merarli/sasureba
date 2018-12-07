@@ -384,7 +384,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
             System.out.println("プレイヤーのHPが上昇した");
-            System.out.println("プレイヤーHP:" + player.getHp_now());
+            System.out.println("プレイヤーHP:" + (int)player.getHp_now());
 
         } else {
             //負けたときの処理
