@@ -141,9 +141,9 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //攻撃力を返してもらい
                         if (key.equals("y")) {
                             player.setAtk(sankosyo.getAtk());
-                            System.out.println("各種参考書を見つけた");
-                            System.out.println("「心強い武器だけどやっぱり重いな」");
-                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                            System.out.println("各種参考書を見つけた\n"
+                                    + "「心強い武器だけどやっぱり重いな」\n"
+                                    + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
@@ -162,9 +162,9 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //攻撃力を返してもらい
                         if (key.equals("y")) {
                             player.setAtk(note.getAtk());
-                            System.out.println("授業内容をメモしたノートを発見した");
-                            System.out.println("「ノートの整理はしっかりしないとね」");
-                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                            System.out.println("授業内容をメモしたノートを発見した\n"
+                                    + "「ノートの整理はしっかりしないとね」\n"
+                                    + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
@@ -183,9 +183,9 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         //攻撃力を返してもらい
                         if (key.equals("y")) {
                             player.setAtk(kanpe.getAtk());
-                            System.out.println("カンニングペーパーの作成に成功した");
-                            System.out.println("「これでテストはばっちりだ！！」");
-                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                            System.out.println("カンニングペーパーの作成に成功した\n"
+                                    + "「これでテストはばっちりだ！！」\n"
+                                    + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
