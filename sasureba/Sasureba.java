@@ -30,13 +30,11 @@ public class Sasureba {//目良
         System.out.println("――僕の名前は『工科太郎』。実は卒業するための単位が足りなかったので留年しかけている。" + "\n" + "なので、どうにかして留年を回避するため、僕は松下先生と交渉することにした――");
         String key = scanner.nextLine();
         //プロローグ
-<<<<<<< HEAD
         if (key.equals("")) {
             System.out.println("太郎「お願いします！　卒業するための単位を僕に下さい！！」\n"
                     + "松下先生「いやー、そう言われてもねぇ。だってそれ、自業自得でしょ？」\n"
                     + "太郎「その通りですけど……でも、どうしても卒業したいんです！　だからお願いします！！」\n");
         }
-=======
         System.out.println("――僕の名前は『工科太郎』。実は卒業するための単位が足りなかったので留年しかけている。なので、どうにかして留年を回避するため、僕は松下先生と交渉することにした――\n"
                 + "\n"
                 + "太郎「お願いします！　卒業するための単位を僕に下さい！！」\n"
@@ -66,7 +64,6 @@ public class Sasureba {//目良
 
         //勝敗条件
         System.out.println("勝利条件：松下先生を倒そう　敗北条件：太郎の敗北");
->>>>>>> 674e813add863b7b7d6f6a4c89b7e7ba34376816
 
         String key2 = scanner.nextLine();
         if (key.equals("")) {
@@ -120,15 +117,12 @@ public class Sasureba {//目良
                 //テストですぐ抜けるようにした
 
 //            break;
-<<<<<<< HEAD
-                map.idou();
             }
             if (map.getBoss_flg() == 1) {
                 System.out.println("松下先生を無事倒した");
             } else if (map.getHosu() < 0) {
                 System.out.println("留年した");
             } else if (map.getSibou_flg() == 1) {
-=======
             map.idou();
         }
         if (map.getBoss_flg() == 1) {
@@ -152,7 +146,6 @@ public class Sasureba {//目良
         } else if (map.getHosu() < 0) {
             System.out.println("留年した");
         } else if (map.getSibou_flg() == 1) {
->>>>>>> 674e813add863b7b7d6f6a4c89b7e7ba34376816
 //            System.out.println("敗北した");
             }
 
