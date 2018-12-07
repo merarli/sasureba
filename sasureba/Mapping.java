@@ -67,7 +67,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
 
     public void idou() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("wasdを入力してください(移動)");
+        System.out.println("w/a/s/dを入力してください(移動)");
         String key = scanner.next();
 
         System.out.println("key: " + key);
