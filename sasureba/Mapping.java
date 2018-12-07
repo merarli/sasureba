@@ -158,7 +158,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             player.setAtk(sankosyo.getAtk());
                             System.out.println("各種参考書を見つけた\n"
                                     + "「心強い武器だけどやっぱり重いな」\n"
-                                    + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                                    + "太郎の攻撃力が" + player.getAtk() + "に変化した");
                             //拾ったら武器を消す
                             map_data[i][j] = "----";
                         } else if (key.equals("n")) {
@@ -175,7 +175,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             player.setAtk(note.getAtk());
                             System.out.println("授業内容をメモしたノートを発見した\n"
                                     + "「ノートの整理はしっかりしないとね」\n"
-                                    + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                                    + "太郎の攻撃力が" + player.getAtk() + "に変化した");
                             map_data[i][j] = "----";
                         } else if (key.equals("n")) {
                             map_data[i][j] = " C  ";
@@ -191,7 +191,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             player.setAtk(kanpe.getAtk());
                             System.out.println("カンニングペーパーの作成に成功した\n"
                                     + "「これでテストはばっちりだ！！」\n"
-                                    + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                                    + "太郎の攻撃力が" + player.getAtk() + "に変化した");
                             map_data[i][j] = "----";
                         } else if (key.equals("n")) {
                             map_data[i][j] = " C  ";
@@ -219,7 +219,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                                 System.out.println("宝箱が開いた\n"
                                         + "パソコンの充電器を発見し、パソコンが使用可能になった\n"
                                         + "「なんで宝箱に充電器なんて入れたんだろう」\n"
-                                        + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                                        + "太郎の攻撃力が" + player.getAtk() + "に変化した");
 
                                 //拾ったら武器を消す
                                 map_data[i][j] = "----";
@@ -412,12 +412,17 @@ public class Mapping {  //目良　賢志 田中、モハメド
 //            System.out.println(talk_start);
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
+<<<<<<< HEAD
             System.out.println("プレイヤーのGPAが上昇した");
             System.out.println("プレイヤーGPA:" + String.format("%.1f", player.getGpa()));
+=======
+            System.out.println("太郎のGPAが上昇した");
+            System.out.println("現在のGPA:" + String.format("%.1f",player.getGpa()));
+>>>>>>> 682d3f3b76de6451a12f25648419d41809f81430
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
-            System.out.println("プレイヤーのHPが上昇した");
-            System.out.println("プレイヤーHP:" + (int) player.getHp_now());
+            System.out.println("太郎のHPが上昇した");
+            System.out.println("現在のHP:" + (int) player.getHp_now());
 
         } else {
             //負けたときの処理
