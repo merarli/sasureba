@@ -30,7 +30,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
     Mob osana = new Mob("おさなゆうこ", 300, 100, "「こちらのプログラムを組んでください」", "「素晴らしいですね」");
     Mob matushita = new Mob("まつしたせんせい", 1000, 200, "「魔王なので宇宙が理解できます」", "「まさか私が負けるとは……」");
     Mob goast = new Mob("ゆうれい", 300, 100, "「再勝負です」", "「また負けるとは……」");
-    
+
     Battle bt = new Battle();
     String[][] map_data;
     //プレイヤーの位置
@@ -133,57 +133,85 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     output += "]";
 
                     if (map_data[i][j].equals(" A  ")) {
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.println("ランクAの武器を発見した" + "\n" + "取得する場合はyを、しない場合はnを入力してください");
+                        String key = scanner.next();
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
-                        player.setAtk(sankosyo.getAtk());
-                        System.out.println("各種参考書を見つけた");
-                        System.out.println("「心強い武器だけどやっぱり重いな」");
-                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                        if (key.equals("y")) {
+                            player.setAtk(sankosyo.getAtk());
+                            System.out.println("各種参考書を見つけた");
+                            System.out.println("「心強い武器だけどやっぱり重いな」");
+                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
-                        //拾ったら武器を消す
-                        map_data[i][j] = " N  ";
+                            //拾ったら武器を消す
+                            map_data[i][j] = "----";
+                        } else if (key.equals("n")) {
+                            map_data[i][j] = " A  ";
+                        }
                     }
 
                     if (map_data[i][j].equals(" C  ")) {
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.println("ランクCの武器を発見した" + "\n" + "取得する場合はyを、しない場合はnを入力してください");
+                        String key = scanner.next();
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
-                        player.setAtk(note.getAtk());
-                        System.out.println("授業内容をメモしたノートを発見した");
-                        System.out.println("「ノートの整理はしっかりしないとね」");
-                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                        if (key.equals("y")) {
+                            player.setAtk(note.getAtk());
+                            System.out.println("授業内容をメモしたノートを発見した");
+                            System.out.println("「ノートの整理はしっかりしないとね」");
+                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
-                        //拾ったら武器を消す
-                        map_data[i][j] = " N  ";
+                            //拾ったら武器を消す
+                            map_data[i][j] = "----";
+                        } else if (key.equals("n")) {
+                            map_data[i][j] = " C  ";
+                        }
                     }
 
                     if (map_data[i][j].equals(" B  ")) {
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.println("ランクBの武器を発見した" + "\n" + "取得する場合はyを、しない場合はnを入力してください");
+                        String key = scanner.next();
                         //Weponクラスに武器の攻撃力を決定してもらって
                         //攻撃力を返してもらい
-                        player.setAtk(kanpe.getAtk());
-                        System.out.println("カンニングペーパーの作成に成功した");
-                        System.out.println("「これでテストはばっちりだ！！」");
-                        System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                        if (key.equals("y")) {
+                            player.setAtk(kanpe.getAtk());
+                            System.out.println("カンニングペーパーの作成に成功した");
+                            System.out.println("「これでテストはばっちりだ！！」");
+                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
-                        //拾ったら武器を消す
-                        map_data[i][j] = " N  ";
+                            //拾ったら武器を消す
+                            map_data[i][j] = "----";
+                        } else if (key.equals("n")) {
+                            map_data[i][j] = " C  ";
+                        }
                     }
 
                     if (map_data[i][j].equals(" 鍵 ")) {
                         player.setHold_key(1);
                         System.out.println("鍵を入手した");
-                        map_data[i][j] = " N  ";
+                        map_data[i][j] = "----";
                     }
 
                     if (map_data[i][j].equals(" 宝 ")) {
                         if (player.getHold_key() == 1) {
-                            player.setAtk(NotePC.getAtk());
-                            System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
-                            System.out.println("「なんで宝箱に充電器なんて入れたんだろう」");
-                            System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                            Scanner scanner = new Scanner(System.in);
+                            System.out.println("宝箱を発見した" + "\n" + "鍵を持っているため開ける事ができます。開けますか？" + "\n" + "開ける場合はyを、開けない場合はnを入力してください");
+                            String key = scanner.next();
+                            if (key.equals("y")) {
+                                player.setAtk(NotePC.getAtk());
+                                System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
+                                System.out.println("「なんで宝箱に充電器なんて入れたんだろう」");
+                                System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
-                            //拾ったら武器を消す
-                            map_data[i][j] = " N  ";
-                            player.setHold_key(0);
+                                //拾ったら武器を消す
+                                map_data[i][j] = "----";
+                                player.setHold_key(0);
+                            } else if (key.equals("n")) {
+                                System.out.println("宝箱を放置しておくことにした");
+                            }
                         } else {
                             System.out.println("宝箱を見つけた" + "\n" + "鍵がないため開かない");
                         }
@@ -194,12 +222,12 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         int a = r.nextInt(5);
                         if (a == 0) {
                             double tmp_hp;
-                        System.out.println(goast.talk_start);
-                        //データをセットしてBattle開始
-                        tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), goast.getHp(), goast.getAtk());
-                        //判定の関数に渡す
-                        hantei(tmp_hp, goast.getTalk_end());
-                        map_data[i][j] = "幽霊";
+                            System.out.println(goast.talk_start);
+                            //データをセットしてBattle開始
+                            tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), goast.getHp(), goast.getAtk());
+                            //判定の関数に渡す
+                            hantei(tmp_hp, goast.getTalk_end());
+                            map_data[i][j] = "幽霊";
                         }
                     }
 
@@ -266,7 +294,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), matushita.getHp(), matushita.getAtk());
                         //判定の関数にわたす
                         hantei(tmp_hp, matushita.getTalk_end());
-                        if(player.getHp_now() > 0){
+                        if (player.getHp_now() > 0) {
                             boss_flg = 1;
                         }
                     }
