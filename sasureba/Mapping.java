@@ -379,7 +379,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
             System.out.println("プレイヤーのGPAが上昇した");
-            System.out.println("プレイヤーGPA:" + player.getGpa());
+            System.out.println("プレイヤーGPA:" + String.format("%.1f",player.getGpa()));
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
             System.out.println("プレイヤーのHPが上昇した");
