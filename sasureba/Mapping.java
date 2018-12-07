@@ -205,13 +205,16 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         if (player.getHold_key() == 1) {
 
                             Scanner scanner = new Scanner(System.in);
-                            System.out.println("宝箱を発見した" + "\n" + "鍵を持っているため開ける事ができます。開けますか？" + "\n" + "開ける場合はyを、開けない場合はnを入力してください");
+                            System.out.println("宝箱を発見した\n"
+                                    + "鍵を持っているため開ける事ができます。開けますか？\n"
+                                    + "開ける場合はyを、開けない場合はnを入力してください");
                             String key = scanner.next();
                             if (key.equals("y")) {
                                 player.setAtk(NotePC.getAtk());
-                                System.out.println("宝箱が開いた" + "\n" + "パソコンの充電器を発見し、パソコンが使用可能になった");
-                                System.out.println("「なんで宝箱に充電器なんて入れたんだろう」");
-                                System.out.println("プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
+                                System.out.println("宝箱が開いた\n"
+                                        + "パソコンの充電器を発見し、パソコンが使用可能になった\n"
+                                        + "「なんで宝箱に充電器なんて入れたんだろう」\n"
+                                        + "プレイヤーの攻撃力が" + player.getAtk() + "に変化した");
 
                                 //拾ったら武器を消す
                                 map_data[i][j] = "----";
@@ -230,7 +233,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
                         if (a == 0) {
                             double tmp_hp;
                             System.out.println(goast.talk_start);
-                            //データをセットしてBattle開始
                             tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), goast.getHp(), goast.getAtk());
                             //判定の関数に渡す
                             hantei(tmp_hp, goast.getTalk_end());
@@ -250,56 +252,41 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("亀田")) {
-                        //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(kameda.talk_start);
-                        //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kameda.getHp(), kameda.getAtk());
-                        //判定の関数にわたす
                         hantei(tmp_hp, kameda.getTalk_end());
                         map_data[i][j] = "幽霊";
                     }
 
                     if (map_data[i][j].equals("柴田")) {
-                        //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(shibata.talk_start);
-                        //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), shibata.getHp(), shibata.getAtk());
-                        //判定の関数にわたす
                         hantei(tmp_hp, shibata.getTalk_end());
                         map_data[i][j] = "幽霊";
                     }
 
                     if (map_data[i][j].equals("菊池")) {
-                        //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(kikuchi.talk_start);
-                        //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kikuchi.getHp(), kikuchi.getAtk());
-                        //判定の関数にわたす
                         hantei(tmp_hp, kikuchi.getTalk_end());
                         map_data[i][j] = "幽霊";
                     }
 
                     if (map_data[i][j].equals("長名")) {
-                        //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(osana.talk_start);
-                        //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), osana.getHp(), osana.getAtk());
-                        //判定の関数にわたす
                         hantei(tmp_hp, osana.getTalk_end());
                         map_data[i][j] = "幽霊";
                     }
 
                     if (map_data[i][j].equals("松下")) {
-                        //仮のHPデータをここにいれる
                         double tmp_hp;
                         System.out.println(matushita.talk_start);
-                        //データをセットしてBattle開始
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), matushita.getHp(), matushita.getAtk());
-                        //判定の関数にわたす
                         hantei(tmp_hp, matushita.getTalk_end());
                         if (player.getHp_now() > 0) {
                             boss_flg = 1;
