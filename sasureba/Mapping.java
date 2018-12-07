@@ -82,6 +82,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 System.out.println("上に移動しました");
                 player_y = player_y - 1;
                 this.hosu++;
+                System.out.println(this.hosu + "歩移動しました");
             }
         }
 
@@ -93,6 +94,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 System.out.println("下に移動しました");
                 player_y = player_y + 1;
                 this.hosu++;
+                System.out.println(this.hosu + "歩移動しました");
             }
         }
 
@@ -104,6 +106,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 System.out.println("右に移動しました");
                 player_x = player_x + 1;
                 hosu++;
+                System.out.println(this.hosu + "歩移動しました");
             }
         }
 
@@ -116,6 +119,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 System.out.println("左に移動しました");
                 player_x = player_x - 1;
                 hosu++;
+                System.out.println(this.hosu + "歩移動しました");
             }
         }
 
