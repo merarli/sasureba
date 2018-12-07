@@ -135,7 +135,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 seigen++;
             }
         }
-        
+
         asiato[player_y][player_x] = 1;
         System.out.println(getMappingString());
 
@@ -167,7 +167,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals(" C  ")) {
-                        
+
                         Scanner scanner = new Scanner(System.in);
                         System.out.println("ランクCの武器を発見した" + "\n" + "取得する場合はyを、しない場合はnを入力してください");
                         String key = scanner.next();
@@ -183,7 +183,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals(" B  ")) {
-                        
+
                         Scanner scanner = new Scanner(System.in);
                         System.out.println("ランクBの武器を発見した" + "\n" + "取得する場合はyを、しない場合はnを入力してください");
                         String key = scanner.next();
@@ -199,14 +199,14 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals(" 鍵 ")) {
-                        
+
                         player.setHold_key(1);
                         System.out.println("鍵を入手した");
                         map_data[i][j] = "----";
                     }
 
                     if (map_data[i][j].equals(" 宝 ")) {
-                        
+
                         if (player.getHold_key() == 1) {
 
                             Scanner scanner = new Scanner(System.in);
@@ -233,7 +233,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("幽霊")) {
-                        
+
                         Random r = new Random();
                         int a = r.nextInt(5);
                         if (a == 0) {
@@ -247,7 +247,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("宇田")) {
-                        
+
                         //仮のHPデータをここに入れる
                         double tmp_hp;
                         System.out.println(uda.talk_start);
@@ -259,7 +259,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("亀田")) {
-                        
+
                         double tmp_hp;
                         System.out.println(kameda.talk_start);
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kameda.getHp(), kameda.getAtk());
@@ -268,7 +268,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("柴田")) {
-                        
+
                         double tmp_hp;
                         System.out.println(shibata.talk_start);
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), shibata.getHp(), shibata.getAtk());
@@ -277,7 +277,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("菊池")) {
-                        
+
                         double tmp_hp;
                         System.out.println(kikuchi.talk_start);
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), kikuchi.getHp(), kikuchi.getAtk());
@@ -286,7 +286,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("長名")) {
-                        
+
                         double tmp_hp;
                         System.out.println(osana.talk_start);
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), osana.getHp(), osana.getAtk());
@@ -295,7 +295,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
 
                     if (map_data[i][j].equals("松下")) {
-                        
+
                         double tmp_hp;
                         System.out.println(matushita.talk_start);
                         tmp_hp = bt.Battle(player.getHp_now(), player.getAtk(), matushita.getHp(), matushita.getAtk());
@@ -306,7 +306,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
                     }
                     //HP全回復
                     if (map_data[i][j].equals("ｸﾞﾘﾑ")) {
-                        
+
                         if (seigen >= 5) {
                             player.setHp_now(player.getHp_max());
                             System.out.println("クリムベルゲン先生によりHPが全回復した！");
@@ -315,7 +315,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
                             System.out.println("クリムベルゲン先生は外出中だ！回復できなかった");
                         }
                     }
-
 
                     try {
                         if (map_data[i + 1][j].equals("松下")) {
@@ -370,24 +369,22 @@ public class Mapping {  //目良　賢志 田中、モハメド
                 } else {
 
                 }
-                
+
                 //初期はマッピングしない
-                if(i == player_y && j == player_x){
+                if (i == player_y && j == player_x) {
                     output += "[";
                     output += "太郎";
-                    output += "]"; 
-                }else if (asiato[i][j] == 1) {
+                    output += "]";
+                } else if (asiato[i][j] == 1) {
                     output += "[";
                     output += map_data[i][j];
                     output += "]";
-                }else{
+                } else {
                     output += "[";
                     output += "＠＠";
                     output += "]";
-                    
-                }
-                
 
+                }
 
             }
             output += "\n";
@@ -414,7 +411,7 @@ public class Mapping {  //目良　賢志 田中、モハメド
             //GPA上昇させる
             player.setGpa(player.getGpa() + 0.1);
             System.out.println("太郎のGPAが上昇した");
-            System.out.println("現在のGPA:" + String.format("%.1f",player.getGpa()));
+            System.out.println("現在のGPA:" + String.format("%.1f", player.getGpa()));
             player.setHp_max(player.getHp_max() + 20);
             player.setHp_now(player.getHp_now() + 20);
             System.out.println("太郎のHPが上昇した");
