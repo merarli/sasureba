@@ -64,7 +64,7 @@ public class Sasureba {//目良
         String key6 = scanner.nextLine();
         if (key.equals("")) {
             //勝敗条件
-            System.out.println("勝利条件：松下先生を倒そう　敗北条件：勇者の敗北");
+            System.out.println("勝利条件：松下先生を倒そう　敗北条件：勇者の敗北、50歩以上移動する");
         }
 
         String key15 = scanner.nextLine();
