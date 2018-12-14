@@ -139,7 +139,7 @@ public class Sasureba {//目良
                 }
                 String key20 = scanner.nextLine();
                 if (key.equals("")) {
-                    System.out.println("松下先生「君はよく頑張ってたけど、残念だけどもう四月になってしまったんですよ」\n"+"主人公「え？　四月……！？　ほ、本当だ。今携帯を見たらもう四月に……っていうことは！？」\n");
+                    System.out.println("松下先生「君はよく頑張ってたけど、残念ながらもう四月になってしまったんですよ」\n"+"主人公「え？　四月……！？　ほ、本当だ。今携帯を見たらもう四月に……っていうことは！？」\n");
                 }
                 String key21 = scanner.nextLine();
                 if (key.equals("")) {
