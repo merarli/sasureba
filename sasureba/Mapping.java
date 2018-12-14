@@ -126,7 +126,6 @@ public class Mapping {  //目良　賢志 田中、モハメド
         if (key.equals("a")) {
             if (player_x == 0) {
                 System.out.println("そこへは移動できません");
-                this.hosu++;
             } else {
                 System.out.println("左に移動しました");
                 player_x = player_x - 1;
