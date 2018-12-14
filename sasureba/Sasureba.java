@@ -150,8 +150,15 @@ public class Sasureba {//目良
                     System.out.println("――でも時間が過ぎてしまったのはどうする事もできず、"+"\n"+"僕はもう一年東京工科大学の生徒として過ごす事が決まってしまったのだった――\n");
                 }
             } else if (map.getSibou_flg() == 1) {
-                System.out.println("敗北した");
-
+                System.out.println("主人公「そんな……勝てなかった……」\n" +"松下先生「少し危なかったですが、やはりこの程度でしたか」\n");
+                String key23 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("主人公「お願いします！　もう一度だけ、もう一度だけチャンスをください！！」\n" +"松下先生「これが泣きの一回ですからもうチャンスはありません。"+"\n"+"また来年、頑張ることだね」\n" +"主人公「そんなぁ……」\n");
+                }
+                String key24 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("――こうして僕は来年も東京工科大学の生徒として一年間過ごすことが決まってしまったのだった――");
+                }
             }
         }
     }
