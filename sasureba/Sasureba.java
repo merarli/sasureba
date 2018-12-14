@@ -124,7 +124,31 @@ public class Sasureba {//目良
                     System.out.println("――こうして僕は来年も東京工科大学の生徒として一年間過ごすことが決まってしまったのだった――");
                 }
             } else if (map.getHosu() >= 50) {
-                System.out.println("留年した");
+                System.out.println("――僕がこのダンジョンに入ってからかなりの日数が経過した。" + "\n" + "時間はかかったけど順調に攻略はできている。この調子なら――\n");
+                String key16 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("松下先生「はいそこまで」\n" + "主人公「え？」\n");
+                }
+                String key17 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("――今日もいつも通り慎重にダンジョンを攻略していると急にダンジョンが消失して松下先生が目の前に現れた。" + "\n" + "まるで霞の如く消えてしまったダンジョンの代わりに現れたのはいつか見たことがある松下先生の研究室だった。\n");
+                }
+                String key19 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("でもどうしていきなりダンジョンが消えてしまったんだろう。"+"\n"+"それに、松下先生のそこまでっていう言葉の意味は一体……――");
+                }
+                String key20 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("松下先生「君はよく頑張ってたけど、残念だけどもう四月になってしまったんですよ」\n"+"主人公「え？　四月……！？　ほ、本当だ。今携帯を見たらもう四月に……っていうことは！？」\n");
+                }
+                String key21 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("松下先生「残念だけど時間切れだね。これ以上は私がどうやっても君を卒業させる事は不可能だからもう一年、頑張る事だね」\n" +"主人公「そんな……こんな結末……」\n");
+                }
+                String key22 = scanner.nextLine();
+                if (key.equals("")) {
+                    System.out.println("――でも時間が過ぎてしまったのはどうする事もできず、"+"\n"+"僕はもう一年東京工科大学の生徒として過ごす事が決まってしまったのだった――\n");
+                }
             } else if (map.getSibou_flg() == 1) {
                 System.out.println("敗北した");
 
